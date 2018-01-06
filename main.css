@@ -65,3 +65,18 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+
+li:last-child{
+  border-right: none;
+}
+
+alignL{
+  float:left;
+  /*color: rgb(0, 128, 11);*/
+  font-size:16pt;
+  font-weight: bold;
+}
