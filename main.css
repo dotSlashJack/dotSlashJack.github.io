@@ -6,6 +6,9 @@ head{
 
 body{
   font-family: 'Asap';
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
 }
 
 /* Navbar container */
@@ -99,9 +102,9 @@ alignL{
   text-align: center;
 }
 
-body {
-  /*margin-top: 100px;*/
+/*body {
+  margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
-}
+}*/
