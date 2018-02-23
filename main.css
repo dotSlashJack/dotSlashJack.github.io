@@ -21,7 +21,7 @@ body{
 .navbar {
   margin-right: 0px;
   margin-left: 0px;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   overflow: hidden;
   background-color: #333;
