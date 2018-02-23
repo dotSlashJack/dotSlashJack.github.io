@@ -13,14 +13,13 @@ body{
   margin-left: 80px;*/
 }
 
-p{
+/*p{
   margin-right: 150px;
   margin-left: 80px;
-}
+}*/
 
 /* Navbar container */
 .navbar {
-  position: fixed;
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
