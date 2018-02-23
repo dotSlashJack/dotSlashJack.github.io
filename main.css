@@ -18,6 +18,8 @@ body{
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 /* Links inside the navbar */
