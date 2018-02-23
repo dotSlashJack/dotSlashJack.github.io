@@ -13,13 +13,12 @@ body{
   margin-left: 80px;*/
 }
 
-/*p{
-  margin-right: 150px;
-  margin-left: 80px;
-}*/
+
 
 /* Navbar container */
 .navbar {
+  position: fixed;
+  width: 100%;
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
@@ -113,9 +112,9 @@ alignL{
   text-align: center;
 }
 
-/*body {
+body {
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
-}*/
+}
