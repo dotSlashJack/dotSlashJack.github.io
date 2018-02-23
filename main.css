@@ -9,6 +9,11 @@ head{
 body{
   font-family: 'Asap';
   margin-bottom: 100px;
+  /*margin-right: 150px;
+  margin-left: 80px;*/
+}
+
+p{
   margin-right: 150px;
   margin-left: 80px;
 }
