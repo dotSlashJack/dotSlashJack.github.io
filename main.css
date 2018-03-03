@@ -116,9 +116,7 @@ alignL{
   text-align: center;
 }
 
-body {
-  /*margin-top: 100px;*/
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
+.styleIndent{
+  margin-left: 100px;
+  margin-right: 100px;
 }
