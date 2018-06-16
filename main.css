@@ -21,10 +21,10 @@ p{
 
 /* Navbar container */
 .navbar {
-  margin-right: 0px;
+  /*margin-right: 0px;
   margin-left: 0px;
-  /*position: fixed;*/
-  width: 100%;
+  position: fixed;
+  width: 100%;*/
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
@@ -38,9 +38,9 @@ p{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  margin-right: 0px;
+  /*margin-right: 0px;
   margin-left: 0px;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 /* The dropdown container */
@@ -51,16 +51,17 @@ p{
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px; 
-  display: inline-block;
+  font-size: 16px;
   border: none;
   outline: none;
   color: white;
-  overflow: hidden;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding: 13px 16px;
+  padding: 14px 16px;
+  margin: 0;
   background-color: inherit;
+  font-family: inherit;
+  /*padding: 11px 16px;
+  display: inline-block;
+  overflow: hidden;*/
 }
 
 /* Add a red background color to navbar links on hover */
@@ -136,8 +137,4 @@ alignL{
   font-size: 18pt;
   color: #2491E5;
   font-family: "Arial Black", Gadget, sans-serif;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
 }
