@@ -28,8 +28,6 @@ p{
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
-  margin-right: 0px;
-  margin-left: 0px;
 }
 
 /* Links inside the navbar */
@@ -42,6 +40,7 @@ p{
   text-decoration: none;
   margin-right: 0px;
   margin-left: 0px;
+  overflow: hidden;
 }
 
 /* The dropdown container */
@@ -53,10 +52,14 @@ p{
 /* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px; 
+  display: inline-block;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  overflow: hidden;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 13px 16px;
   background-color: inherit;
 }
 
@@ -88,6 +91,7 @@ p{
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
+  vertical-align: top;
 }
 
 /* Show the dropdown menu on hover */
@@ -132,4 +136,8 @@ alignL{
   font-size: 18pt;
   color: #2491E5;
   font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
 }
