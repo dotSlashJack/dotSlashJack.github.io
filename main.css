@@ -9,8 +9,8 @@ body{
   margin-bottom: 10px;
   /*margin-left: 75px;*/
   font-family: "Arial Black", Gadget, sans-serif;
-  margin-right: 150px;
-  /*margin-left: 80px;*/
+  /*margin-right: 150px;*/
+  margin-left: 0px;
 }
 
 p{
@@ -126,7 +126,7 @@ alignL{
 .styleIndent{
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 50px;
+  margin-top: 25px;
   font-family: "Arial Black", Gadget, sans-serif;
 }
 
@@ -145,9 +145,10 @@ alignL{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+  max-width: 175px;
+  position: absolute;
+  margin-left: 75px;
+  /*margin: auto;*/
 }
 
 /* Hide the images by default */
@@ -235,3 +236,22 @@ alignL{
   to {opacity: 1}
 }
 /*END slideshow CSS*/
+
+/*multiple columns*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  /*padding: 10px;*/
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
