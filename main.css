@@ -23,8 +23,8 @@ p{
 .navbar {
   /*margin-right: 0px;
   margin-left: 0px;
-  position: fixed;
-  width: 100%;*/
+  position: fixed;*/
+  width: 100%;
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
@@ -255,4 +255,9 @@ alignL{
   content: "";
   display: table;
   clear: both;
+}
+/* */
+table, th, td {
+  border: none;
+  font-family: Tahoma, Geneva, sans-serif;
 }
