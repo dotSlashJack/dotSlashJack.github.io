@@ -127,7 +127,8 @@ alignL{
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 25px;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: Tahoma, Geneva, sans-serif;
+  /*font-family: "Arial Black", Gadget, sans-serif;*/
 }
 
 .subtitle{
