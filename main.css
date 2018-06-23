@@ -149,6 +149,7 @@ alignL{
   max-width: 175px;
   position: absolute;
   margin-left: 75px;
+  padding: 0px, 50px;
   /*margin: auto;*/
 }
 
@@ -261,4 +262,9 @@ alignL{
 table, th, td {
   border: none;
   font-family: Tahoma, Geneva, sans-serif;
+  
+}
+
+tr{
+  white-space: pre;
 }
