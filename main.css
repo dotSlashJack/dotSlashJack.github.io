@@ -277,7 +277,7 @@ alignL{
 }
 /* */
 table, th, td {
-  border: none;
+  width: 100%;
   font-family: Tahoma, Geneva, sans-serif;
   
 }
