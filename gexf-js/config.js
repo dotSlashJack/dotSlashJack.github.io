@@ -49,11 +49,11 @@ GexfJS.setParams({
             this setting can't be changed from the User Interface
         */
     showEdgeLabel : true,
-    sortNodeAttributes: true,
+    sortNodeAttributes: false, //default true
         /*
             Alphabetically sort node attributes
          */
-    showId : false,
+    showId : false, //default true
         /*
             Show the id of the node in the list
             this setting can't be changed from the User Interface
