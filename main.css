@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 head{
-  font-family: 'Lato';
+  font-family: 'Montserrat';
 }
 
 body{
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   margin-bottom: 10px;
   /*margin-left: 75px;*/
-  font-family: "Arial Black", Gadget, sans-serif;
+  /*font-family: "Arial Black", Gadget, sans-serif;*/
   /*margin-right: 150px;*/
   margin-left: 0px;
   margin-top: 0px;
@@ -17,8 +17,9 @@ body{
 }
 
 p{
-  font-family: Tahoma, Geneva, sans-serif;
-  /*margin-left: 75px;*/
+  font-family: 'Montserrat';
+  /*font-family: Tahoma, Geneva, sans-serif;
+  margin-left: 75px;*/
 }
 
 
@@ -148,8 +149,9 @@ alignL{
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 25px;
-  font-family: Tahoma, Geneva, sans-serif;
-  /*font-family: "Arial Black", Gadget, sans-serif;*/
+  font-family: Montserrat;
+  /*font-family: Tahoma, Geneva, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;*/
 }
 
 .subtitle{
