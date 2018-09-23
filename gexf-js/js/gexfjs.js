@@ -294,12 +294,12 @@
                 .appendTo(_html);
             $('<h4>').text(strLang("nodeAttr")).appendTo(_html);
             _ul.appendTo(_html);
-            if (GexfJS.params.showId) {
+            /*if (GexfJS.params.showId) {
                 var _li = $("<li>");
                 $("<b>").text("id: ").appendTo(_li);
                 $("<span>").text(_d.id).appendTo(_li);
                 _li.appendTo(_ul);
-            }
+            }*/
             for (var i = 0, l = _d.a.length; i < l; i++) {
                 var attr = _d.a[i];
                 var _li = $("<li>");
