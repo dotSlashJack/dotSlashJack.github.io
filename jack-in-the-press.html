@@ -1,6 +1,27 @@
 <!Doctype html>
 <html lang="en">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <style> 
+        figure.item {
+        /* To correctly align image, regardless of content height: */
+        vertical-align: top;
+        display: inline-block;
+        /* To horizontally center images and caption */
+        text-align: center;
+        /* The width of the container also implies margin around the images. */
+        width: 120px;
+        }
+        img {
+            max-width: 300px;
+            max-height: 200px;
+            background-color: grey;
+        }
+        .caption {
+            border: 1px dotted blue;
+            text-align: center;
+        }
+
+    </style>
     <head>
         
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -40,8 +61,25 @@
                 Cameo: <br>Page 3 (presentation title), 17 (summary of research presentation)<br><br>
                 <a href="https://issuu.com/emoryundergraduateresearchprograms/docs/s18_day_2_abstract_booklet_-_web_ve">E-Booklet Link</a><br>
             </p>
-            </div>
+            <br>
+            <p>
+                    <div style="font-weight: bold;">Sky Tavern Junior Ski Program (Posters & Website)</div><br>
+                    Cameo: <br>
+                </p>
+            <figure class="item" style="margin-right: 150px;">
+                <img src="skyt1.jpg"/>
+            </figure>
+            <figure class="item">
+                <img src="skyt2.jpg"/>
+            </figure><br><br>
+            <a href="https://www.skytavern.com">Website Link</a><br>
+        </div>
         <br>
+        
+        
+        <br><br>
+        
+        
 </body>
 <div class="footer">
     <p>coded by Jack Hester, hosted by google and github</p>
