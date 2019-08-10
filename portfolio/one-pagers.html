@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <head>
+        <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
+        <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html");  
+            });
+        </script>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                    content.style.display = "none";
+                    } else {
+                    content.style.display = "block";
+                    }
+                });
+                }
+            </script>
+        <div id="header"></div>
+
+        <style>
+                ul {
+                list-style-type: none;
+                }
+        
+                ul li:before {
+                content: '-';
+                position: absolute;
+                margin-left: -20px;
+                }
+            </style>
+    </head>
+
+    <body>
+    <!--<div class="styleIndent">-->
+        <title>Jack Hester</title>
+        
+    </body>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                <div class="subtitle">
+                    One-pagers
+                </div> 
+                <div class="styleIndent">
+                        <div class="styleIndent">
+                            <button class="collapsible">Open Collapsible</button>
+                            <div class="content">
+                                <p><a href='https://google.com'>test linke</a></p>
+                            </div>
+                            </p>
+                            <br>
+                        </div>
+                </div>
+                
+
+            <div class="column">
+                <div class="subtitle">
+                    What are one-pagers?
+                </div> 
+            <div>One pagers are ...</div>
+        
+            </div>
+                
+        </div>
+
+
+    </body>
+    
+    <div class="footer">
+        <p>coded by Jack Hester, hosted by google and github</p>
+    </div>
+
+</html>
