@@ -296,8 +296,6 @@ tr{
 }
 
 .collapsible {
-  /*background-color: #eee;
-  color: #444;*/
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -307,10 +305,9 @@ tr{
   font-size: 15px;
 }
 
-/* Style the collapsible content. Note: hidden by default */
+
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
 }
