@@ -210,13 +210,14 @@ mean(x)</code></pre>
 </div>
 <div id="why-is-it-sometimes-called-the-sample-mean" class="section level4">
 <h4>Why is it sometimes called the SAMPLE mean?</h4>
-<p>When we don’t have a value for every person/item/thing in a population (group), we use a <span class="math inline">\(\it{sample}\)</span> that hopefully represents the whole population. When that’s the case, we say it’s the sample mean to distinguist between it from the population mean, wich is not known with certainty since we cannot measure all of its values.</p>
-<p>Typically, <span class="math inline">\(\overline{x}\)</span> represents the sample mean, and <span class="math inline">\(\mu\)</span> represents the (usually unknown) population mean</p>
+<p>When we don’t have a value for every person/item/thing in a population (group), we use a <span class="math inline">\(\it{sample}\)</span> that hopefully represents the whole population. When that’s the case, we say it’s the sample mean to distinguish between it from the population mean, which is not known with certainty since we cannot measure all of its values.</p>
+<p>Typically, <span class="math inline">\(\overline{x}\)</span> represents the sample mean, and <span class="math inline">\(\mu\)</span> represents the (usually unknown) population mean.</p>
 </div>
 </div>
 <div id="median" class="section level2">
 <h2>Median</h2>
 <p>The median is the middle value of an </p>
+<p>Population median is typically noted as <span class="math inline">\(\hat{m}\)</span>.</p>
 <div id="calculating-mean-in-r-1" class="section level4">
 <h4>Calculating mean in R</h4>
 <pre class="r"><code>x &lt;- c(0.6,11,7,6,3.2,-100) #your set of values (observations)
@@ -225,15 +226,39 @@ median(x)</code></pre>
 </div>
 <div id="outliers-median-versus-mean" class="section level4">
 <h4>Outliers: median versus mean</h4>
-<p>The median is more resistent to outliers (extreme values on one side or the other of the data set). Why? Let’s think about an example…</p>
+<p>The median is more resistant to outliers (extreme values on one side or the other of the data set). Why? Let’s think about an example…</p>
 <p>Let’s start with the set of observations (1.5,1.55,1.7,1.71,1.9,1.92,1.98). The sample mean <span class="math inline">\(\overline{x}\)</span> is 1.75, and the mean is 1.71.</p>
 <p>Now let’s add an outlier to the data, and make the set of observations (1.5,1.55,1.7,1.71,1.9,1.92,1.98,5).</p>
 <p>The new sample mean is 2.16 (a large jump from 1.75), but the median is 1.81, much closer to the original mean and median values…</p>
 <p>In general, it’s reasonably likely, especially as the number of samples increases, that values towards the middle of the set of samples/observations (again, assuming it’s ordered) will be fairly close together and not contain outliers. As illustrated in the example, this means that the median will not shift that far away from the “middle” with the addition of an outlier, whereas the mean might shift much more (especially with smaller sample sizes).</p>
 </div>
 </div>
+<div id="variance" class="section level2">
+<h2>Variance</h2>
+<p>Variance is the average of the square of the deviations about the sample mean. The equation for (sample) variance is:</p>
+<p><span class="math display">\[s^{2}=\frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n-1}\]</span> where the variables are the represented the same way as above and <span class="math inline">\(s^2\)</span> represents variance (standard deviation, <span class="math inline">\(s\)</span>, squared).</p>
+<p>Why do we divide by <span class="math inline">\(n-1\)</span> and not <span class="math inline">\(n\)</span>? It’s been shown that the difference between sample observations and the sample mean, <span class="math inline">\(\overline{x}\)</span>, is systematically smaller than the same for the whole population with population <span class="math inline">\(\mu\)</span>. Therefore, to correct for this, we subtract one from the sample size. As the sample size grows larger, this effect will diminish but it’s important to note.</p>
+<p>In theory, the more (greater) the average of the square distance that an observation falls from the sample mean, the more variable the data is.</p>
+<p>Additional note: you may see <span class="math inline">\(\sigma^2\)</span> for variance, which is often the population (same as discussed above) variance</p>
+<div id="calculating-variance-in-r" class="section level4">
+<h4>Calculating variance in R</h4>
+<pre class="r"><code>x &lt;- c(0.6,11,7,6,3.2,1.8)
+var(x)</code></pre>
+<pre><code>## [1] 14.76267</code></pre>
+</div>
+</div>
 <div id="standard-deviation" class="section level2">
 <h2>Standard Deviation</h2>
+<p>The standard deviation is the square root of the variance, written as:</p>
+<p><span class="math display">\[s=\sqrt{\frac{\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}}{n-1}}\]</span> where again <span class="math inline">\(s\)</span> is the standard deviation.</p>
+<p>The sample standard deviation measures, on average how far any single sample observation is from the sample mean. Again, the further from the sample mean the observations are on average, the more variable the data is.</p>
+<p>Why might we want to use standard deviation instead of variance? It will be in the same units as the mean, where the variance will have those units squared. But you can still extrapolate the same information from both. For example, you could likely see a normal distribution (a concept for another one-pager) with a mean of 10 and standard deviation of 3, which is the same thing as a mean of 10 and variance of 9 (3^2) on that same distribution.</p>
+<div id="calculating-standard-deviation-in-r" class="section level4">
+<h4>Calculating standard deviation in R</h4>
+<pre class="r"><code>x &lt;- c(0.6,11,7,6,3.2,1.8)
+sd(x)</code></pre>
+<pre><code>## [1] 3.842222</code></pre>
+</div>
 </div>
 
 
