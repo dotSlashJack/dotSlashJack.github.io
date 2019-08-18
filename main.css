@@ -159,8 +159,10 @@ alignL{
   margin-bottom: 30px;
   margin-right: 100px;
   font-size: 18pt;
-  color: #2491E5;
-  font-family: "Arial Black", Gadget, sans-serif;
+  /*color: #2491E5;
+  font-family: "Arial Black", Gadget, sans-serif;*/
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: bold;
 }
 
 /*slideshow CSS*/
