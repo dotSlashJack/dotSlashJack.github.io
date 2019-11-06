@@ -68,8 +68,8 @@ p{
   overflow: hidden;*/
 }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+/* Add a light blue background color to navbar links on hover */
+.navbar .dropdown:hover .dropbtn {
   background-color :#00e6b8; 
 }
 
@@ -95,7 +95,7 @@ p{
 
 /* Add background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
   vertical-align: top;
 }
 
@@ -105,14 +105,70 @@ p{
   display: block;
 }
 
-/* Secondary dropdown menu for sub-items on hover */
-.dropdown-secondary{
+/***SECONDARY DROPDOWN***/
+
+.dropdown-content-secondary {
   display: none;
   position: absolute;
-} 
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-.dropdown-secondary a:hover{
-  background-color: #CCCCCC;
+.dropdown-content-secondary:hover {
+  background-color: #ffffff;
+  vertical-align: top;
+}
+
+.dropdown-secondary{
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content-secondary a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-secondary a:hover {
+  background-color: #ddd;
+  vertical-align: top;
+}
+
+
+.dropdown-secondary:hover .dropdown-content-secondary {
+  display: block;
+}
+
+.dropdown-secondary .dropbtn-secondary {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 0;
+  background-color: inherit;
+  font-family: inherit;
+  padding: 15px 64px 15px 0px;
+
+  /*padding: 11px 16px;
+  display: inline-block;
+  overflow: hidden;*/
+}
+
+.navbar .dropdown-secondary:hover .dropbtn-secondary {
+  background-color :#00e6b8; 
+}
+
+
+/*****/
+
+.navbar a:hover {
+  background-color :#00e6b8; 
 }
 
 li:last-child{
