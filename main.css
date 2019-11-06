@@ -93,15 +93,26 @@ p{
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Add background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
   vertical-align: top;
 }
 
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Secondary dropdown menu for sub-items on hover */
+.dropdown-secondary{
+  display: none;
+  position: absolute;
+} 
+
+.dropdown-secondary a:hover{
+  background-color: #CCCCCC;
 }
 
 li:last-child{
