@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <head>
+        <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
+        <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("../header.html");  
+            });
+        </script>
+        <div id="header"></div>
+
+        <style>
+                ul {
+                list-style-type: none;
+                }
+        
+                ul li:before {
+                content: '-';
+                position: absolute;
+                margin-left: -20px;
+                }
+            </style>
+    </head>
+
+    <body>
+    <!--<div class="styleIndent">-->
+        <title>Jack Hester</title>
+        
+    </body>
+
+    
+    <body>
+        <div class="row">
+            <div class="column">
+                <div class="subtitle">
+                    One-pagers
+                </div> 
+                <div class="styleIndent">
+                    <p>Click on  a section to view the notes I've uploaded in that category! Hopefully these are helpful, but I strongly encourage you to make your own. (More sheets will be added as I have time.)</p>
+                    <button class="collapsible"><u>Python</u></button>
+                    <div class="content">
+                        <p><a href='https://jackhester.com/documents/one-pagers/python_environment.pdf'>Configuring python virtual environments and dependencies</a></p>
+                    </div>
+                    <br><br>
+
+                    <button class="collapsible"><u>Statistics and Biostatistics</u></button>
+                    <div class="content">
+                        <p><a href='https://jackhester.com/documents/one-pagers/basic_stats.html'>Basic statistics: mean, median,standard deviation, variance, and samples</a></p>
+                        <p><a href='https://jackhester.com/documents/one-pagers/hypothesis_testing_intro.html'>Basic statistics: identifying distributions (bernoulli, binomial, uniform, normal)</a></p>
+                        <p><a href='https://jackhester.com/documents/one-pagers/hypothesis_testing_intro.html'>Basic statistics: introduction to hypothesis testing</a></p>
+                    </div><br><br>
+
+                    <button class="collapsible"><u>Epidemiology</u></button>
+                    <div class="content">
+                        <p><a href='https://jackhester.com/documents/one-pagers/2x2_table.pdf'>Basic epi: introduction to the two-by-two (2x2) table</a></p>
+                        <p><a href='https://jackhester.com/documents/one-pagers/odds_ratio.pdf'>Basic epi: odds ratio using the 2x2 table</a></p>
+                        <p><a href='https://jackhester.com/documents/one-pagers/DAG_intro.pdf'>Basic epi: introduction to directed acyclic graphs (DAGs)</a></p>
+                    </div>
+                </div><br><br>
+
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                        content.style.display = "none";
+                        } else {
+                        content.style.display = "block";
+                        }
+                    });
+                    }
+                </script>
+                
+                
+            </div>
+            <div class="column">
+                <div class="subtitle">
+                    What are one-pagers?
+                </div> 
+                <div class="styleIndent">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What’s the goal of a one-pager? The goal is to distill a lot of complex information you might need for a task into a set of one-page sheets that allow you to interface with the complex tool or system you’re faced with. I’ve taken the term from Chris Hadfield, an astronaut who used one-pagers to refresh himself of how to use the interfaces he’d be presented with to complete a complex tasks on space shuttles or the ISS.</p> 
+                
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We often learn a lot of information about how to perform a task, whether it’s in space or for an assignment in class, but it’d be impossible to remember everything we’ve learned and be able to recall it immediately if we needed it months or years later. So, just as Chris Hadfield did, I’ve collected notes that are useful when I have to remember how something works long after I’ve originally learned it. I’ve taken my notes from the past and current projects and distilled them down into (approximately) one-page guides that anyone could use, and occasionally added notes for someone who might be learning it for the fist time. I hope you might find them useful!</p> 
+                    
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m slowly digitizing them and uploading them, but if there’s a topic you’d like to see covered that’s not here, please feel free to <a href='https://jackhester.com/contact.html'>contact me</a>, and if I have notes on it I’ll be sure to upload them.</p>
+            </div>
+            <br>
+        
+            </div>
+                
+        </div>
+
+
+    </body>
+    
+    <div class="footer">
+        <p>coded by Jack Hester, hosted by google and github</p>
+    </div>
+
+</html>
