@@ -37,7 +37,7 @@ p{
     margin:0;
     text-align:center;
 	font-size: 24px; 
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .nav-lower{
@@ -60,7 +60,7 @@ p{
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-	padding: 14px 16px;
+  padding: 14px 16px;
 }
 .nav-lower a{
     display:inline-block;
@@ -82,7 +82,8 @@ p{
 /*.nav-lower a: hover
 }*/
 .dropdown {
-  float: left;
+  display: inline;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -91,7 +92,7 @@ p{
 	font-weight: bold;
 	border: none;
 	outline: none;
-	color: white;
+  color: white;
 	background-color: inherit;
 	font-family: inherit;
 	/*padding: 14px 16px;*/
@@ -102,10 +103,14 @@ p{
 .dropdown-content {
   display: none;
   position: absolute;
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
   /*background-color: #f9f9f9;*/
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -329,11 +334,15 @@ tr{
 
 /* Top text */
 .top {
-  position: absolute;
+  /*position: absolute;
   left: 50%;
-  transform: translate(-50%, 0%);
-  /*top: 8px;
-  left: 16px;*/
+  max-width: 100%;
+  transform: translate(-50%, 0%);*/
+  position: absolute;
+  text-align:center;
+    top: 30px;
+    left: 0;
+    right: 0;
 }
 
 /* Top right text */
