@@ -1,184 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <head>
-        <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script> 
-            $(function(){
-                $("#header").load("header.html");  
-            });
-            </script>
-        <div id="header"></div>
+<head>
+<meta charset="UTF-8">
+<title>Home | Jack Hester</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+.btn-navigate {
+  background: white;
+  text-align: center;
+  width: 149px;
+  height: 149px;
+  border-radius: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+	border: 1px solid black;
+	outline: none;
+}
+.divided {
+  display: flex;
+  align-items: center;
+}
 
-        <style>
-                ul {
-                list-style-type: none;
-                }
-        
-                ul li:before {
-                content: '-';
-                position: absolute;
-                margin-left: -20px;
-                }
-            </style>
-    </head>
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  /*margin: 5px*/
+}
+</style>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script> 
+		$(function(){
+			$("#header").load("header.html");  
+		});
+		
+		$(document).ready(function() {  
+			$(window).scroll(sticky_nav());
+			sticky_nav(); // Force the first call on refresh 
+		});
+	</script>
+	
+</head>
+	
+<body>
+	<div class="container">
+		
+		<span class="top"><div id="header" style="text-align: center"></div></span>
+		<span class="center-lower">
+			<div class="nav-lower">
+				<a href="https://jackhester.com/documents/hester_resume.pdf"><div class="rounded-oval">Resume</div></a>
+				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				<a href='https://jackhester.com/jack-in-the-press.html'><div class="rounded-oval">Publicity</div></a>
 
-    <body>
-    <!--<div class="styleIndent">-->
-        <title>Jack Hester</title>
-        
-    </body>
+			</div>
+		</span>
+		
+		<img src="images/pvd_fullwidth-1.jpeg" class="fullwidth-background-img">
+	</div>
+	
+	<!--<div class="row">
+		<img src="images/glacier_fullwidth.jpeg" class="fullwidth-background-img">
+	</div>-->
+	<br>
+	<a id="about"></a>
+	
+	<div class="lucida-bold" style="text-align: center; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif'; font-weight: bold; font-size: 32px;">About Me</div>
+	
+	<div class="divided", style="padding-left: 120px; padding-right: 120px; padding-top: 15px;">
+	<button id="whybutton" class="btn btn-navigate"  onclick="whybtn()">Why?</button><span class="divider"></span>
+		
+	<button id="howbutton" class="btn btn-navigate" onclick="howbtn()">How?</button><span class="divider"></span>
+		
+	<button id="whatbutton" class="btn btn-navigate" onclick="whatbtn()">What?</button>
+	</div><br><br>
+	
+	<div id="dynamic" class="styleIndent">Click to </div>
+	
+	<br><br><br><br>
+	
+<script>
+	function whybtn(){
+		var whyelem = document.getElementById('whybutton');
+		var howelem = document.getElementById('howbutton');
+		var whatelem = document.getElementById('whatbutton');
+		
+		whyelem.style.color = "white";
+		whyelem.style.background = "black";
+		
+		howelem.style.color = "black";
+		howelem.style.background = "white";
+		
+		whatelem.style.color = "black";
+		whatelem.style.background = "white";
+		
+		var myDiv = document.getElementById("dynamic");
+		myDiv.innerHTML = "Due to countless surgeries and doctors office visits, I've been personally immersed in the health care system from the day I was born. I would constantly imagine ways that the health care system could be improved, from better equipment to cures for diseases to improved physician-patient interactions. My motivation to improve health care--and more fundamentally improve peoples' quality of life--has been at the core of everything I've done. Eventually, I landed in public health in order to work on this goal.";
+	}
+	
+	function howbtn(){
+		
+		var whyelem = document.getElementById('whybutton');
+		var howelem = document.getElementById('howbutton');
+		var whatelem = document.getElementById('whatbutton');
+		
+		whyelem.style.color = "black";
+		whyelem.style.background = "white";
+		
+		howelem.style.color = "white";
+		howelem.style.background = "black";
+		
+		whatelem.style.color = "black";
+		whatelem.style.background = "white";
+		
+		var myDiv = document.getElementById("dynamic");
+		myDiv.innerHTML = "Coming Soon";
+	}
+	
+	function whatbtn(){
+		var whyelem = document.getElementById('whybutton');
+		var howelem = document.getElementById('howbutton');
+		var whatelem = document.getElementById('whatbutton');
+		
+		whyelem.style.color = "black";
+		whyelem.style.background = "white";
+		
+		howelem.style.color = "black";
+		howelem.style.background = "white";
+		
+		whatelem.style.color = "white";
+		whatelem.style.background = "black";
+		
+		var myDiv = document.getElementById("dynamic");
+		myDiv.innerHTML = "Coming SOon";
+	}
 
-    <body>
-        <div class="row">
-            <div class="column">
-                <div class="subtitle">
-                    Who and What?
-                </div> 
-                <div class="styleIndent">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm Jack, a first-year student at the Brown University School of Public Health. I recently graduated with an interdisciplinary BA in public health and behavioral modeling from Emory University. I study the health care system from an interdisciplinary perspective. My studies have taken me on a journey through the fields health care, sociology, biology, linguistics, quantitive sciences, computer science and computational modeling, physics, research and writing, and classical literature. I do public health, but that's only the beginning as you'll see if you read the rest of this page.
-                </p>
-                <br>
-                </div>
-                <div class="subtitle">
-                    Why?
-                </div> 
-                <div class="styleIndent">
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due to countless surgeries and doctors office visits, I've been personally immersed in the health care system from the day I was born. I would constantly imagine ways that the health care system could be improved, from better equipment to cures for diseases to improved physician-patient interactions. My motivation to improve health care--and more fundamentally improve peoples' quality of life--has been at the core of everything I've done. Eventually, I landed in public health in order to work on this goal.
-                    </p>
-                <br>
-                </div>
-                
-                <div class="subtitle">
-                    How?
-                </div> 
-                <div class="styleIndent">
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As I mentioned above, I've studied public health from a variety of perspectives.
-                        I also like to ask lots of questions. Here are a few I'm currently working on, or am at least considering:<br>
-                        <ul>
-                            <li>How can we understand and model peer effects realting to health outcomes?</li>
-                            <li>How can space tech, ranging from the obvious (remote sensing data, etc.) to the less-obvious be used to improve health, and how can health care developments improve space travel?</li>
-                            <li>How much access to health care records should patients have? How do we keep them secure and disperse them (using EmTech i.e. blockchain)?</li>
-                            <li>How can data be visualized to make it easier to understand for both patients and doctors?</li>
-                            <li>What design choices facilitate healthy behaviors?</li>
-                            <li>What can we adapt from space technologies to design efficient, sustainable houses and cities that also mitigate negative effects of climate change on health?</li>
-                            <li>Who are the major stakeholders in facilitating changes to the health care system? What are they motivated by? How can data be effectively communicated to them in a persuasive way?</li>
-                            <li>How can health care record entry be simplified and/or sped up? How can it be automatically stored and processed to display insights about treatments over time?</li>
-                            <li>How is the health care system being decentralized away from the current hospital-centric model? What impact does this have on health care accessibility and cost?</li>
-                            <li>What is the return on investment for a given public health intervention? How is this determined? Who wants to know?</li>
-                            <li>How can data be effectively generated and shared inside (and outside) the health care system (including public health departments, hosptials, inependent researchers, etc.)?</li>
-                            <li>What are the major barriers to patients changing their behaviors towards healthier ones? How can geographic barriers be overcome?</li>
-                            <li>Who are the biggest players in health care reform going to be? What is the role of private corporations going to look like?</li>
-                            <li>What insights can behavioral economics provide to those working in health care? How about models from (unexpected?) fields like physics?</li>
-                        </ul>
-                        Would you like to collaborate with me on any of these? Please <a href="contact.html">contact me</a>!<br><br>
-                        I'm also planning an upcoming course that will step students through an open-ended research process as they choose their own data and question. If you have recommendations or insights, I'd love to hear them! The draft course materials currently live <a href="https://php-xxx.jackhester.com">here</a>, but the website is in very early stages and will have a new, permanent home soon.
-                    </p>
-                <br>
-                </div>
-                <!---<div class="subtitle">
-                    What I do
-                </div> 
-                <div class="styleIndent">
-                    <p>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beyond asking lots of questions, ... As I mentioned above, I study and work primarily in public health. Even more fundamentally, I aim to understand people and how they behave so that I can improve foster healthier behaviors at every level of society. On this journey, I've gained skills in multiple fields to complement my core field. As a result, I blend technology and behavioral modeling with public health in an effort to better understand how to model the spread of diseases, people, technology, and ideas. By doing so, I strive to create meaningful improvements in behaviors and health outcomes. If you're curious what kinds of projects I work on, I encourage you to look through the rest of my website [in progress] or <a href="contact.html">contact me</a>.
-                    </p>
-                <br>
-                </div>-->
-                <br>
-                </div>
-                
-
-            <div class="column">
-                <div class="subtitle">
-                    Me in the 'wild'
-                </div> 
-                    
-                         
-                <div class="slideshow-container">
-
-                    <div class="mySlides fade">
-                    <!--<div class="numbertext">1 / 3</div>-->
-                    
-                        <img src="img1.jpg" style="width:100%">
-                    </div>
-                    
-                    <div class="mySlides fade">
-                        <img src="img2.jpg" style="width:100%">
-                    </div>
-                    
-                    <div class="mySlides fade">
-                        <img src="img3.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                            <img src="img4.jpg" style="width:100%">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="img5.jpg" style="width:100%">
-                    </div>
-
-                    
-                
-                    <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
-
-                    <br>
-                    </div>
-                    
-                    <div class="subtitle" style="margin-top: 285px">
-                        Maxims and aphorisms
-                    </div> 
-                <div class="styleIndent">
-                    <meta charset="utf-8">
-                    <meta name="viewpoint">
-                    <script type="text/javascript" async
-                        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
-                    </script>
-                    <p style="margin-right: 50px">
-                        "Just because you have a data point doesn't mean it's useful."<br><br>
-                        "All models are wrong, but some are useful."<br> <i>-George Box</i><br><br>
-                        "Confidence is what you have before you understand the problem."<br><i>-Woody Allen</i><br><br>
-                        "The purpose of computation is insight, not numbers."<br><i>-Richard Hamming</i><br><br>
-                        "When a career is by choice, vocation becomes vacation."<br><br>
-                        "When you ask why something happens, how does a person answer why something happens?...The deeper a thing is the more interesting it is."<br><i>-Richard Feynman</i><br><br>
-                        <!--"Hear me now... believe me later."<br><i>-Benn Konsynski</i><br><br>-->
-                        "There are no routine statistical questions; only questionable statistical routines."<br><i>-David Cox</i><br><br>
-                        "Not knowing cheers the knowing."<br><i>-John Cage</i><br><br>
-                        "Design is the beauty of using constraints as advantages."<br><i>-Aza Raskin</i><br><br>
-                        <br>  
-                    </p>
-                </div>
-                    
-                </div>
-                
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none"; 
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1} 
-                slides[slideIndex-1].style.display = "block"; 
-                setTimeout(showSlides, 3500); // Change image every 2 seconds
-            }
-            </script>
-
-    </body>
-    
-    <div class="footer">
-        <p>coded by Jack Hester, hosted by google and github</p>
-    </div>
-
+</script>
+</body>
 </html>
