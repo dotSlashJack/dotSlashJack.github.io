@@ -4,116 +4,13 @@
         <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="portfolio.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="portfolio.js"></script>
+        
     <title>PORTFOLIO | JACK HESTER</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Asap');
-        @import url("https://fonts.googleapis.com/css?family=Montserrat");
-        * {
-          box-sizing: border-box;
-        }
-
-        h1{
-            font-family: 'Montserrat';
-        }
         
-        .header {
-            text-align: center;
-            padding: 20px;
-            font-family: 'Montserrat';/*
-          font-family: "Arial Black", Gadget, sans-serif;*/
-        }
-        
-        /* Create two equal columns that floats next to each other */
-        .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-        }
-        
-        .column img {
-            margin-top: 12px;
-        }
-        
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        a:link {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:visited {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: black;
-        }
-
-        a:active {
-            text-decoration: underline;
-            color: black;
-        }
-
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            font-size: 8pt;
-            text-align: center;
-            font-family: 'Montserrat';
-        }
-
-
-        .container {
-  position: relative;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.1;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-    background-color:black;
-    font-family: 'Lucida Grande';
-    font-style: italic;
-  color: white;
-  font-size: 24px;
-  padding: 16px 32px;
-}
         </style>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <!--script> 
@@ -128,36 +25,51 @@
 <div class="header">
 <!--<link rel="stylesheet" type="text/css" href="main.css">-->
   <a href="https://jackhester.com"><h1>Jack Hester</h1></a>
-  <p><i>You found a hidden page! I'll be adding links and publishing the link on my home page soon though.</i></p>
-  <a href="https://jackhester.com">Return Home</a>
+  <p style="font-size: 24px;">about info coming soon. this page is under construction</p>
+  <div class="searchbar">
+    <form>
+          <label>I'd like to see: </label>
+          <select id="main_select" class="custom-select" onchange="filter_content(this)">
+            <option value = "1">All&nbsp;</option>
+            <option value = "2">Publications & Papers</option>
+            <option value = "3">Software</option>
+            <option value = "4">Theses</option>
+            <option value = "5">four</option>
+          </select>
+  </form>
+</div>
+  <br><br><a href="https://jackhester.com">[Main Site]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://jackhester.com/documents/hester_resume.pdf">[View My Resume]</a>
 </div>
 <!-- Photo Grid -->
 <div class="row" style="font-family: Lucida Grande;"> 
   <div class="column">
 <!--TopicNet-->
+<div id="topicnet">
   <div class="container"><a href="https://jackhester.com"><div class="middle">
     <div class="text">Project Overview and Code</div></div>
   <img src="/tiles/webnet.png" style="width:100%" class="image"></div>
   <p style="text-align: center;">TopicNet: Web Friendly Topic Modeling</p></a>
   <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, coding, project, linguistics</p>
+</div>
 <!--Undergrad Thesis-->
+<div id="undergrad_thesis">
   <div class="container"><a href="https://jackhester.com"><div class="middle"><div class="text">Thesis Overview and Link to Publication</div>
   </div><img src="/tiles/ade-thesis.png" style="width:100%" class="image"></div>
   <div class="middle"><div class="text">Project Details and Code</div></div>
   <p style="text-align: center;">Automatically Mining Adverse Drug Side Effects</p></a>
   <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">thesis, coding, project, linguistics</p>
   </div>
-
-  <div class="column">
-      <!--nyer and times race-->
+</div>
+<div class="column">
+<!--nyer and times race-->
+<div id="race_rev">
   <div class="container"><a href="https://jackhester.com">
     <div class="middle"><div class="text">Project Overview, Code, and Link to Publication</div></div>
     <img src="/tiles/race.png" style="width:100%" class="image"></div>
   <p style="text-align: center;">Race Differences</p></a>
   <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, coding, paper, linguistics, publication</p>
-  
   <!--<img src="/w3images/ocean.jpg" style="width:100%">-->
-  
+</div>
   </div>  
   <div class="column">
   <!--<img src="/w3images/wedding.jpg" style="width:100%">-->

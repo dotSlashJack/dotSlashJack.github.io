@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-size: 48px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat';/*
+    font-family: "Arial Black", Gadget, sans-serif;*/
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 8pt;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+
+.container {
+    position: relative;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.1;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color:black;
+    font-family: 'Lucida Grande';
+    font-style: italic;
+    color: white;
+    font-size: 24px;
+    padding: 16px 32px;
+}
+
+.searchbar{
+    font-size: 24px;
+}
+
+.custom-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    /*background-image: url(...);*/   /* Add custom arrow */
+    font-size: 24px;
+    font-family: 'Lucida Grande';
+    font-style: normal;
+    border: none;
+    /*(text-decoration: underline;*/
+    background-color: none;
+    background: none;
+    overflow: visible;
+    border-bottom: 2px solid black;
+    /*min-width: 30px;
+    width: min-content;*/
+}
