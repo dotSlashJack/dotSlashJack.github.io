@@ -17,7 +17,7 @@ h1{
 }
 
 /* Create two equal columns that floats next to each other */
-.column {
+/*.column {
     float: left;
     width: 50%;
     padding: 10px;
@@ -25,7 +25,7 @@ h1{
 
 .column img {
     margin-top: 12px;
-}
+}*/
 
 /* Clear floats after the columns */
 .row:after {
@@ -131,4 +131,48 @@ a:active {
     border-bottom: 2px solid black;
     /*min-width: 30px;
     width: min-content;*/
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto;*/
+    /*grid-auto-flow: column;*/
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 50%;
+    height: 50%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    padding: 20px;
+    font-family: 'Lucida Grande';
+  }
+  
+#overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    font-family: 'Lucida Grande';
+}
+
+.description-area{
+    font-family: 'Lucida Grande';
+    padding-left: 50px;
 }

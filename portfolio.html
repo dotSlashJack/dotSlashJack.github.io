@@ -10,7 +10,6 @@
         
     <title>PORTFOLIO | JACK HESTER</title>
     <style>
-        
         </style>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <!--script> 
@@ -24,63 +23,164 @@
 <!-- Header -->
 <div class="header">
 <!--<link rel="stylesheet" type="text/css" href="main.css">-->
+  <a id="top"></a>
   <a href="https://jackhester.com"><h1>Jack Hester</h1></a>
-  <p style="font-size: 24px;">about info coming soon. this page is under construction</p>
+  <p style="font-size: 24px;"><em>Please note: this page is still being built</em></p>
+  <p style="font-size: 24px;">I'm an interdisciplinary researcher, and these are my projects.</p>
   <div class="searchbar">
     <form>
-          <label>I'd like to see: </label>
+          <label>I'd like to see:&nbsp;</label>
           <select id="main_select" class="custom-select" onchange="filter_content(this)">
-            <option value = "1">All&nbsp;</option>
-            <option value = "2">Publications & Papers</option>
-            <option value = "3">Software</option>
-            <option value = "4">Theses</option>
-            <option value = "5">four</option>
+            <option value = "1">Everything</option>
+            <option value = "2">Teaching & Education</option>
+            <option value = "3">Software & Code</option>
+            <option value = "4">Publications & Papers</option>
+            <option value = "5">Computational Linguistics</option>
+            <option value = "6">Design & Data Viz</option>
+            <option value = "7">Current Projects (TBA)</option>
+            <option value = "8">Past Projects (TBA)</option>
           </select>
   </form>
 </div>
   <br><br><a href="https://jackhester.com">[Main Site]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://jackhester.com/documents/hester_resume.pdf">[View My Resume]</a>
 </div>
+<br><br><br>
 <!-- Photo Grid -->
-<div class="row" style="font-family: Lucida Grande;"> 
-  <div class="column">
-<!--TopicNet-->
-<div id="topicnet">
-  <div class="container"><a href="https://jackhester.com"><div class="middle">
-    <div class="text">Project Overview and Code</div></div>
-  <img src="/tiles/webnet.png" style="width:100%" class="image"></div>
-  <p style="text-align: center;">TopicNet: Web Friendly Topic Modeling</p></a>
-  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, coding, project, linguistics</p>
-</div>
-<!--Undergrad Thesis-->
-<div id="undergrad_thesis">
-  <div class="container"><a href="https://jackhester.com"><div class="middle"><div class="text">Thesis Overview and Link to Publication</div>
-  </div><img src="/tiles/ade-thesis.png" style="width:100%" class="image"></div>
-  <div class="middle"><div class="text">Project Details and Code</div></div>
-  <p style="text-align: center;">Automatically Mining Adverse Drug Side Effects</p></a>
-  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">thesis, coding, project, linguistics</p>
+<div class="grid-container" style="font-family: Lucida Grande;"> 
+  <!--Undergrad Thesis-->
+  <div id="undergrad_thesis">
+    <div class="container"><a href='#bottom' onclick="show_by_id('undergrad_thesis_description')"><div class="middle"><div class="text">Thesis Overview and Link to Publication</div>
+    </div><img src="/tiles/ade-thesis.png" style="width:100%" class="image"></div>
+    <div class="middle"><div class="text">click for poject details and code</div></div>
+    <p style="text-align: center;">Automatically Mining Adverse Drug Side Effects</p></a>
+    <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">thesis, code, paper, linguistics</p>
+    
   </div>
+<!--CEPC 0904 Course-->
+<div id="cepc_0904">
+  <div class="container"><a href='#bottom' onclick="show_by_id('cepc0904_description')"><div class="middle"><div class="text">Course Description, Link To Course Website</div>
+  </div><img src="/tiles/cepc0904.png" style="width:100%" class="image"></div>
+  <div class="middle"><div class="text">click for course overview and link to course materials</div></div>
+  <p style="text-align: center;">Course: "From research to publication: building your own research project"</p></a>
+  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">teaching, education, data visualization</p>
 </div>
-<div class="column">
+
 <!--nyer and times race-->
-<div id="race_rev">
-  <div class="container"><a href="https://jackhester.com">
-    <div class="middle"><div class="text">Project Overview, Code, and Link to Publication</div></div>
-    <img src="/tiles/race.png" style="width:100%" class="image"></div>
-  <p style="text-align: center;">Race Differences</p></a>
-  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, coding, paper, linguistics, publication</p>
-  <!--<img src="/w3images/ocean.jpg" style="width:100%">-->
-</div>
-  </div>  
-  <div class="column">
-  <!--<img src="/w3images/wedding.jpg" style="width:100%">-->
-  
+  <div id="race_rev">
+    <div class="container">
+        <a href='#bottom' onclick="show_by_id('race_rev_description')">
+            <div class="middle">
+                <div class="text">click for paper overview, code, and link to publication
+                </div>
+            </div>
+            <img src="/tiles/race.png" style="width:100%" class="image">
+    </div>
+    <p style="text-align: center;">Race Differences (TBA)</p>
+    </a>
+    <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, code, paper, linguistics, publication</p>
   </div>
-  <div class="column">
+<!--education cafe-->
+<div id="race_rev">
+  <div class="container">
+      <a href='#bottom' onclick="show_by_id('educafe_description')">
+          <div class="middle">
+              <div class="text">click for overview, link to videos, and link to code
+              </div>
+          </div>
+          <img src="/tiles/race.png" style="width:100%" class="image">
+  </div>
+  <p style="text-align: center;">Education Cafe (TBA)</p>
+  </a>
+  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">teaching, education, data viz, code</p>
+</div>
+
+<!--r4edu-->
+<div id="r4edu">
+  <div class="container">
+      <a href='#bottom' onclick="show_by_id('r4edu_description')">
+          <div class="middle">
+              <div class="text">click for project overview and code
+              </div>
+          </div>
+          <img src="/tiles/race.png" style="width:100%" class="image">
+  </div>
+  <p style="text-align: center;">r4edu (R for Education)</p>
+  </a>
+  <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data viz, software, code, education</p>
+</div>
+
   <!--<img src="/w3images/underwater.jpg" style="width:100%">-->
   </div>
-</div>
-<br><div style="font-family: 'Montserrat'; text-align: center; padding-bottom: 100px; padding-top: 50px;">Questions? <a href="https://jackhester.com/contact.html">Contact Me</a></div>
 
+<!--Description Area (hidden by default)-->
+<br><br>
+<!--CEPC 0904-->
+<div id="cepc0904_description" style="display: none;" >
+  <hr>
+  <div class="description-area">
+    <p><strong>CEPC-0904: "From idea to publication: building your own research project"</strong></p>
+    <p>TBA<br></p>
+    <p><a href="https://cepc-0904.jackhester.com">Click here to see the course website and all of the course materials.</a></p>
+    <br>
+    <a href="#top" onclick="close_by_id('cepc0904_description')" style='font-size: small;'>[Back to the top]</a>
+  </div>
+  <br><br><br>
+</div>
+<!--Race Rev-->
+<div id="race_rev_description" style="display: none;" >
+  <hr>
+  <div class="description-area">
+    <p><strong>TBA</strong></p>
+    <p>TBA<br></p>
+    <p><a href="$">Click here to see the publication (TBA).</a></p>
+    <br>
+    <a href="#top" onclick="close_by_id('race_rev_description')" style='font-size: small;'>[Back to the top]</a>
+  </div>
+  <br><br><br>
+</div>
+<!--Undergrad Thesis-->
+<div id="undergrad_thesis_description" style="display: none;" >
+  <hr>
+  <div class="description-area">
+    <p><strong>Undergraduate Thesis: "A Verb-Based Approach to Mining Adverse Drug Side-Effects from Online Health Care Forums"</strong></p>
+    <p>My undergraduate thesis used methods from computational linguistics to parse health care forums and automatically extract mentions of adverse drug side-effects. The software pipline I created used Stanford CoreNLP, a custom support vector machine (SVM), a custom data parser, and other tools written in python and R. I was able to identify several side-effects that were mentioned on the drug insert, in the FDA FEARS database, and a couple of previously unidentified side-effects.<br></p>
+    <p><a href="https://issuu.com/jackhester/docs/hester_thesis">Click here to view the entire thesis.</a></p>
+    <br>
+    <a href="#top" onclick="close_by_id('undergrad_thesis_description')" style='font-size: small;'>[Back to the top]</a>
+  </div>
+  <br><br><br>
+</div>
+<!--Education Cafe-->
+<div id="educafe_description" style="display: none;" >
+  <hr>
+  <div class="description-area">
+    <p><strong>Education Cafe</strong></p>
+    <p>TBA<br></p>
+    <p><a href="#">Click here to view the youtube channel (TBA).</a></p>
+    <br>
+    <a href="#top" onclick="close_by_id('educafe_description')" style='font-size: small;'>[Back to the top]</a>
+  </div>
+  <br><br><br>
+</div>
+<!--r4edu-->
+<div id="r4edu_description" style="display: none;" >
+  <hr>
+  <div class="description-area">
+    <p><strong>r4edu: R for Education</strong></p>
+    <p>TBA<br></p>
+    <p><a href="#">Click here to view the code (TBA).</a></p>
+    <br>
+    <a href="#top" onclick="close_by_id('r4edu_description')" style='font-size: small;'>[Back to the top]</a>
+  </div>
+  <br><br><br>
+</div>
+
+
+
+
+
+  <div style="font-family: 'Montserrat'; text-align: center; padding-bottom: 100px; padding-top: 50px;">Questions? <a href="https://jackhester.com/contact.html">Contact Me</a></div>
+<a id="bottom"></a>
 
 <div class="footer">
         <p>coded by Jack Hester, hosted by google and github</p>
