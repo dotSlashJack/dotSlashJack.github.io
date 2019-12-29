@@ -68,8 +68,20 @@ function filter_content(selection) {
     else if(selectedOption == 8){
         //TODO
     }
-    
-    //undergrad_thesis, topicnet, race_rev
-    //TODO: make it shift by colunn not just row 
-    //(maybe we can make the outline here and set each individual inner html)
+}
+
+var i = 0;
+var txt = 'I\'m an interdisciplinary researcher, and these are my projects.';
+var speed = 60;
+
+function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("typewrite").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+function onLoad_commands(){
+    typeWriter();
 }
