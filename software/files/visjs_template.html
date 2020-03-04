@@ -1,201 +1,46 @@
 <!doctype html>
 <html>
 <head>
-    <title>Network | Groups</title>
+  <title>Vis Network | Basic usage</title>
 
-    <style>
-        p {
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-          -webkit-hyphens: auto;
-          -moz-hyphens: auto;
-          -ms-hyphens: auto;
-          hyphens: auto;
-          /*width: 650;
-          max-width: 650;*/
-        }
-        body {
-            color: black;
-            font: 12pt arial;
-            background-color: white;
-            max-width: 800px;
-        }
+  <script type="text/javascript" src="vis.min.js"></script>
+  <link href="vis.min.css" rel="stylesheet" type="text/css"/>
 
-        #mynetwork {
-            /*width: 1150px;*/
-            height: 600px;
-            border: 1px solid #444444;
-            /*border: none;
-            background-color: #222222;*/
-            background-color: white;
-            /*max-width: 800px;*/
-        }
-        div.hidden
-        {
-           display: none;
-        }
-    </style>
-
-    <script type="text/javascript" src="vis.min.js"></script>
-    <link href="vis.min.css" rel="stylesheet" type="text/css"/>
-
-
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
 </head>
-
 <body>
 
+<h1>
+    Add title here.
+</h1>
 
-  <div id="extraControls" class="hidden" style="max-width: 650;">
-    <pre id="node1"><!--Sustainable Marketing in Retail-->
-      <p style="text-align: center;">From Cotton to Clothing: Unpacking Sustainable Marketing in the Fashion Industry</p>
-      <p style="text-align: left;">by Julia Clark</p>
-      <p style="text-align: left;">Julia's thesis will be focusing on researching sustainable marketing in the retail industry.&nbsp;As customers become increasingly aware of and educated about sustainability,&nbsp;and therefore value sustainable products more,&nbsp;companies use sustainable marketing techniques to demonstrate their commitments to environmental sustainability and workers'&nbsp;rights efforts in order to attract a broader range of customers.&nbsp;She will be using the company Patagonia as a case study for her research.</p>
-    </pre>
-    <pre id="node2"><!--Interconnectivity through Touch and Photography-->
-      <p style="text-align: center">The Healing Eye: Enhanced Interconnectivity through Contact Improvisation</p>
-      <p style="text-align: left;">by Amanda Obando</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node3"><!--Carbon Offsets at Emory-->
-      <p style="text-align: center;">Carbon Offsets at Emory: Growing a Global Reputation While Cutting a Global Impact</p>
-      <p style="text-align: left;">by Kryn Dykema</p>
-      <p style="text-align: left;">Kryn will follow the development of Emory's Carbon Offset Program and analyze the process to recommend a plan of best practice for this type of implementation. With this focus he will suggest the most effective fundraising strategy for a university, drawing from study of behavioral economics; he will calculate the most comprehensive greenhouse gas metric, from research on emissions factors in aviation, and he will find the most realized offset protocol, given the scholarship of climate science. With this Kryn aims to draft a manual and record of my work with Emory's Office of Sustainability.</p>
-    </pre>
-    <pre id="node4"><!--The Future of The Music Industry-->
-      <p style="text-align: center;">The Disrupters: How Steve Jobs and Frank Ocean Negotiated The Digital Revolution and the Future of The Music Industry</p>
-      <p style="text-align: left;">by Yoltic Sandoval</p>
-      <p style="text-align: left;">Yoltic will be looking at how blockchain will empower artist to pursue independent careers. In order to do this he will analyze the current environment of the music industry. This will enable him to better apply blockchain to the nuances and facets of the music indsutry, especially in regards to streaming platforms.</p>
-    </pre>
-    <pre id="node5"><!--Urban Planning and Development-->
-      <p style="text-align: center">Too Good to be True: Critiquing Mixed Use Developments' Attempt to Replicate Organic Sense of Place</p>
-      <p style="text-align: left;">by Matthew Heldman</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node6"><!--Compassionate Touch-->
-      <p style="text-align: center">The Compassionate Touch: How to More Effectively Develop Compassion Using Touch and Movement</p>
-      <p style="text-align: left;">by Marshall Kupka-Moore</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node7"><!--Food Sustainability at Emory-->
-      <p style="text-align: center">A Drawdown Approach to Food Sustainability at Emory: Putting Plant-based foods at the Center of the Plate</p>
-      <p style="text-align: left;">by Isaac Goldman</p>
-      <p style="text-align: left">Isaac's thesis outlines that plant-based foods require fewer greenhouse gases to produce than meat and animal-based foods. By proving this fact, he argues that through the introduction of more plant-based foods on the menus of Emory’s dining halls, the university will be able to decrease the greenhouse gas emissions associated with the food it purchases. He analyzes the results of a series of tests of plant-based products in Emory dining halls, which provided data on which plant-based products are most appealing to students and therefore, which plant-based foods students are most likely to substitute in place of meat-based foods. By modeling and projecting the greenhouse gases associated with Emory’s food, he is able to see whether or not the plant-based foods tests were effective in decreasing Emory’s food-related GHGs, he is able to track GHG reductions in the DUCling from 2017-2018 to 2018-2019, and he can project future GHG emissions reduction if the DUCling decreases meat purchasing by 25% and 50%, respectively. From the results of the plant-based foods tests as well as the GHG modeling, Isaac will propose a plan, with tangible steps and programs, for Emory and other universities to decrease their food-related GHG emissions in the future.</p>
-    </pre>
-    <pre id="node8"><!--Side Effect Data Mining-->
-      <p style="text-align: center">Mining Adverse Drug Side Effects from Online Forum Posts</p>
-      <p style="text-align: left;">by Jack Hester</p>
-      <p style="text-align: left">Jack’s senior thesis, "Mining Adverse Drug Effects from Online Forum Posts," uses computational linguistics methods to analyze patient posts on healthcare forums in order to predict previously undiscovered prescription drug side-effects. He also examines the overall severities of both newer and older drug side-effects, and uncovers overall patient sentiments about the drugs. Jack hopes his findings will improve or even save the lives of prescription drug users in the future.</p>
-    </pre>
-    <pre id="node9"><!--ADHD: Developmental Criminality-->
-      <p style="text-align: center">The Developmental Trajectory of Criminality in Youth with ADHD</p>
-      <p style="text-align: left;">by Melease Lynn</p>
-      <p style="text-align: left">Melease will analyze many neurological, psychological, and sociological factors influencing the trajectory of a child with ADHD, that might lead to delinquent behaviors over the course of their childhood. The aim of her project is to establish the complexity of criminality in youth with ADHD as a fuller picture, rather than within limited domains of research.</p>
-    </pre>
-    <pre id="node10"><!--Social Enterpreneurship for Integration-->
-      <p style="text-align: center">Reviving Recipes of Resilience from the Refugee Crisis: A Social Enterprise Proposal</p>
-      <p style="text-align: left;">by Farah Al Chammas</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node11"><!--Neuroscience of Creativity in Workplaces-->
-      <p style="text-align: center">The Neuroscience of Creativity: An Innovative Approach to Increase Creativity at the Workplace</p>
-      <p style="text-align: left;">by Nava Amalfard</p>
-      <p style="text-align: left">Nava's thesis is focused on how understanding the neuronal circuits and brian regions used in creative thinking can help enhance workplace creativity through innovative architectural styles and human resourcing practices.</p>
-    </pre>
-    <pre id="node12"><!--AAS Classrooms as Safe Spaces-->
-      <p style="text-align: center">Priviledging Our Presence: The Race-Space Dynamic in Emory's African American Studies Classrooms</p>
-      <p style="text-align: left;">by Leigh Schlecht</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node13"><!--Locus of Control of BBAs-->
-      <p style="text-align: center">The Locus of Control of Undergraduate Business Students</p>
-      <p style="text-align: left;">by Olivia Fogel</p>
-      <p style="text-align: left">Locus of control (LOC) is one of the most popular personality variables in psychology. It originated from Rotter’s social learning theory and is defined as a generalized problem solving expectancy (Rotter, 1966). LOC measures how much individuals expect their outcomes to be determined by their behavior.  Generally, scholars find that the greater the expectancy behavior has an effect, the more positive the outcomes (Nowicki & Duke, 2016). Locus of control has been associated with many outcomes. However, few studies have focused on determining the LOC of specific undergraduate majors; in this case business school students. This study was conducted at a private, mid-sized Southeastern undergraduate business school. Students (n = 414) completed Nowicki-Strickland LOC scales upon entering the business school, in either their fourth or fifth semester. Males who entered business school in their fourth semester were more internal than their female peers (F = 9.78, M = 8.74, p = 0.09). Male students who entered in their fourth semester were more internal than male students who entered in their fifth semester (Mfourth =8.74, Mfifth =9.23, p = 0.04). The findings suggest that males who entered business school earlier were more internal than their female early appliers and males who entered later. These findings suggest that it might be important to examine why time of entry into the business school varies by LOC and what that might mean for the overall success of the undergraduate program. If research finds support for a predicted relationship between LOC and performance, in terms of academic success, job acquisition, graduate school acceptance, awards and the like then future studies should focus on (1) how internals gain their advantage and (2) how to help students in the business school become more internal.</p>
-    </pre>
-    <pre id="node14"><!--Commodification of Street Art-->
-      <p style="text-align: center">From Streets to Galleries: The Commodification of Street Art to Private Spaces</p>
-      <p style="text-align: left;">by Nicole Swords</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
-    <pre id="node14"><!--Opioids Epidemic and Epigenetics-->
-      <p style="text-align: center">Stigmatization and Epigenetic Changes: the missing link of a drug's user narrative </p>
-      <p style="text-align: left;">by Madelyn Zapata</p>
-      <p style="text-align: left">No Abstract Currently Available</p>
-    </pre>
+<p>
+    Add info here.
+</p>
 
-  </div>
-
-<h1 style="text-align: center">Senior Research Topics</h1>
-<h4>Welcome to the ILA! You can view information on each senior project (blue nodes) by clicking on them.</h3>
 <div id="mynetwork"></div>
-<pre id="eventSpan"></pre>
+
 <script type="text/javascript">
-    var color = 'gray';
-    var len = undefined;
-    //var addNode: false;
+  // create an array with nodes
+  
+  //<--insertHere-->
 
-    //<--insertHere-->
-
-    // create a network
-    /*var container = document.getElementById('mynetwork');
-    var data = {
-        nodes: nodes,
-        edges: edges
-    };
-    var options = {
-        nodes: {
-            shape: 'dot',
-            size: 30,
-            font: {
-                size: 32,
-                color: '#ffffff'
-            },
-            borderWidth: 2
-        },
-        edges: {
-            width: 2
-        }
-    };
-    network = new vis.Network(container, data, options);*/
-    var container = document.getElementById('mynetwork');
-    var data = {
-        nodes: nodes,
-        edges: edges
-    };
-
-    var options = {
-			interaction:{hover:true},
-			manipulation: {
-				enabled: false,
-        //mine addEdge addNode: true,
-        addEdge: false,
-        editNode: undefined,
-        editEdge: false,
-        deleteNode: false,
-        deleteEdge: false
-        //end mine
-			}
-      /*addNode:{
-        enabled: false
-      }*/
-		};
-
-    var network = new vis.Network(container, data, options);
-
-
-    network.on("click", function (params) {
-        params.event = "[original event]";
-        params.aboutContent = this.getNodeAt(params.pointer.DOM);
-        params.v1 = '<h2>This is the section about Jack</h2><p>info...</p>'
-
-        //document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
-        //console.log('click event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
-        //document.getElementById('eventSpan').innerHTML = document.getElementById('node'+params.aboutContent).innerHTML;
-        var infoGet = 'node'+params.aboutContent;
-        document.getElementById('eventSpan').innerHTML = document.getElementById(infoGet).innerHTML;
-    });
-
-
-
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {};
+  var network = new vis.Network(container, data, options);
 </script>
+
+<p>Vis.min.js, vis.min,css, and skeleton of this file are credit of: https://visjs.github.io/vis-network/docs/network/ and https://github.com/visjs/vis-network.<p>
 </body>
 </html>

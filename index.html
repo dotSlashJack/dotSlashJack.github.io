@@ -38,6 +38,19 @@
 ul li{
 	padding-bottom: 5px;
 }
+
+#scrolldown { 
+    height: 40px; 
+    position: fixed; 
+    bottom:3%;
+    width:100%; 
+    background-color: none; 
+    opacity: 1;
+	z-index: 1;
+	color: white;
+	font-weight: bold;
+}
+
 </style>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script> 
@@ -49,6 +62,29 @@ ul li{
 			$(window).scroll(sticky_nav());
 			sticky_nav(); // Force the first call on refresh 
 		});
+
+		//hide the scroll down arrow after scrolling occurred
+		$(window).bind('scroll', function() {
+     		if ($(window).scrollTop() > 100) {
+         		$('#scrolldown').hide();
+     		}
+     	else {
+         	$('#scrolldown').show();
+     	}
+		});
+
+		function checkDevice(){
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				x = document.getElementById("scrolldown");
+				x.style.display = "none";
+			}
+			var w = window.innerWidth;
+			//print(w);
+			if(w < 767){
+				x = document.getElementById("scrolldown")
+				x.style.display = "none"
+			}
+		}
 	</script>
 	
 </head>
@@ -66,8 +102,9 @@ ul li{
 				<a href="https://jackhester.com/portfolio.html"><div class="rounded-oval">&nbsp;Portfolio&nbsp;</div></a>
 
 			</div>
-		</span>
 		
+		</span>
+		<div id="scrolldown">╲╱</div>
 		<img src="images/pvd_fullwidth-1.jpeg" class="fullwidth-background-img">
 	</div> <!--end container with main image, header, circular buttons-->
 	
@@ -183,6 +220,7 @@ ul li{
 
 	function load_script(){
 		whybtn();
+		checkDevice();
 	}
 
 </script>
