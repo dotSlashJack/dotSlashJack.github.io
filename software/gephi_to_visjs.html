@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="internal.css">
+    <head>
+        <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("header-black.html");  
+            });
+        </script>
+       
+    </head> 
+    <title>Gephi to vis.js | Jack Hester</title>
+    <div class="subtitle">
+        Gephi to vis.js tool
+    </div>
+
+    <body>
+        <div id="header"></div>
+        <div class="footer">
+            <p>coded by Jack Hester, hosted by google and github</p>
+        </div>
+    
+    <div class="styleIndent">
+        <b>Convert Gephi network graph to a web-friendly network graph</b>
+        <p>
+            <a href='https://jackhester.com/software/files/gephi_to_visjs.py'>Download Here</a><br>
+        </p>
+
+        <p>
+            This python tool converts network diagrams made in Gephi to a web friendly format powered by vis.js<br>
+            Usage<br>
+            From gephi:<br>
+            &nbsp;&nbsp;&nbsp;1) Open the data tables (window > data table).<br>
+            &nbsp;&nbsp;&nbsp;2) Click "nodes" and click "export table" to save nodes as a CSV.<br>
+            &nbsp;&nbsp;&nbsp;3) Click "edges" and click "export table" to save edges as a CSV.<br>
+            &nbsp;&nbsp;&nbsp;4) Run the python tool. Use the -h flag for details. It is recommended to place the python file and CSVs in a dedicated directory.<br>
+            Note: you will need vis.min.js, vis.min.css, and a template file. These will be downloaded automatically for you.<br><br>
+
+            I eventually be adding this script and many others to a github repo... There has also been work done to allow you to convert from gephi to visjs using json (https://visjs.github.io/vis-network/examples/network/data/importingFromGephi.html). Eventually, I plan to expand my tool to allow you to easily build tables that can be used by vis.js (using this current tool) and by gephi.
+        </p><br>
+    
+    </div> 
+    </body>
+    
+</html>
