@@ -285,7 +285,6 @@
       //window.setInterval(function(){
         var date = new Date();
         if(date.getMinutes() % 2 === 0){
-          console.log('executed');
           //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id='+ generateCompId(date);
           //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=16:15-4/2/2020';
           let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=21:50-4/1/2020';
@@ -318,7 +317,10 @@
                 mapTypeId: 'satellite'
               });
 
+              console.log('OUT');
+              console.log('----');
               console.log(out);
+              console.log('----');
 
               heatmap = new google.maps.visualization.HeatmapLayer({
                 data: out,
