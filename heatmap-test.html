@@ -264,7 +264,7 @@
       }*/
     ];
 
-    function generateCompId(dateObj){
+    function generateCompId(dateObj, isInitialLoad){
       utc = dateObj.getTime() + (dateObj.getTimezoneOffset() * 60000);
       nd = new Date(utc + (3600000*-4));
       day = nd.getDay();
@@ -272,69 +272,79 @@
       minute = nd.getMinutes();
       hour = nd.getHours();
       year = nd.getFullYear();
-      if(minute.toString().length < 2){
+
+      if(isInitialLoad!=false){ //on first load, go back in time to last available data
+        minute = minute - (minute%10)
+      }
+      
+      /*if(minute.toString().length < 2){
           return ''.concat(hour.toString(),':0',minute.toString(),'-',month.toString(),'/',day.toString(),'/',year.toString())
       }
       else{
           return ''.concat(hour.toString(),':',minute.toString(),'-',month.toString(),'/',day.toString(),'/',year.toString())
-      }
+      }*/
+      return 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=16:15-4/2/2020';
     }
+    
+    var date = new Date();
+    var url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id='+ generateCompId(date, true);
 
     function initMap() {
       var out = [];
-      window.setInterval(function(){
-        var date = new Date();
-        if(date.getMinutes() % 2 === 0){
-          //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id='+ generateCompId(date);
-          //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=16:15-4/2/2020';
-          let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=21:50-4/1/2020';
-          setTimeout(() => {
-          fetch(url, {
-            headers: {
-              'Access-Control-Allow-Origin': '*'
-            },
-            // mode: 'no-cors'
+
+      //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id='+ generateCompId(date);
+      //let url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id=16:15-4/2/2020';
+      
+      fetch(url, {
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        },
+        // mode: 'no-cors'
+      })
+        .then((data) => data.json())
+        .then((data) => {
+          console.warn(data);
+          var co = 1;
+
+          //var data = {"1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 6, "7": 6, "8": 6, "9": 6}
+          //console.log('dat');
+          //console.log(data[1]);
+
+          fences.forEach((fence) => {
+            //console.warn(data[co]);
+            if (!!fence) {
+              for (i = 0; i < data[co]; i++) {
+                out.push(new google.maps.LatLng(fence.latitude, fence.longitude));
+              }
+              co++;
+            }
           })
-            .then((data) => data.json())
-            .then((data) => {
-              console.warn(data);
-              var co = 1;
 
-              //var data = {"1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 6, "7": 6, "8": 6, "9": 6}
-              //console.log('dat');
-              //console.log(data[1]);
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: { lat: 43.696387, lng: -79.418618 },
+            mapTypeId: 'terrain'
+          });
 
-              fences.forEach((fence) => {
-                //console.warn(data[co]);
-                if (!!fence) {
-                  for (i = 0; i < data[co]; i++) {
-                    out.push(new google.maps.LatLng(fence.latitude, fence.longitude));
-                  }
-                  co++;
-                }
-              })
-
-              map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: { lat: 43.696387, lng: -79.418618 },
-                mapTypeId: 'terrain'
-              });
-
-              /*console.log('OUT');
-              console.log('----');
-              console.log(out);
-              console.log('----');*/
-
-              heatmap = new google.maps.visualization.HeatmapLayer({
-                data: out,
-                map: map
-              });
-            })
-            .catch((err) => console.error(err));
-          }, 60000); //end set timeout (1 min)
-        }//end if for time
-      }, 60000); //end check time interval
+          heatmap = new google.maps.visualization.HeatmapLayer({
+            data: out,
+            map: map
+          });
+        })
+        .catch((err) => console.error(err));
+      
     }
+
+    window.setInterval(function(){
+      console.log('ran');
+      date = new Date();
+      if(date.getMinutes() % 10 === 0){
+        setTimeout(() => {
+          initMap();
+        }, 60000); //end set timeout (1 min)
+      }//end if for time
+      url = 'https://cors-anywhere.herokuapp.com/https://mpc-results.herokuapp.com/?computation_id='+ generateCompId(date, false);
+    }, 60000); //end check time interval
 
     function toggleHeatmap() {
       heatmap.setMap(heatmap.getMap() ? null : map);
