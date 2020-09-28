@@ -100,6 +100,7 @@ p{
 }
 
 .dropdown-content {
+  background-color: rgba(0, 0, 0, 0.25);
   display: none;
   position: absolute;
   left: 50% !important;
@@ -255,12 +256,12 @@ alignL{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .25} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 0} 
   to {opacity: 1}
 }
 /*END slideshow CSS*/
@@ -374,12 +375,23 @@ tr{
 
 /*Rounded oval shape for button backgrounds*/
 .rounded-oval{
+  display: flex;
 	width: inherit;
-	height: 35px;
-	background: white;
+	height: 40px;
+  border: white solid 1px;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.05);
 	border-radius: 40px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 35px;
-	word-wrap: normal;
+  word-wrap: normal;
+  transition: background 0.25s;
+}
+.rounded-oval:hover {
+  background: rgba(0, 0, 0, 0.25)
 }
