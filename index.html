@@ -8,7 +8,14 @@
 <title>Home | Jack Hester</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 <style>
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #CBD5E0;
+}
 .btn-navigate {
+	cursor: pointer;
   background: white;
   text-align: center;
   width: 149px;
@@ -22,8 +29,20 @@
   color: black;
   font-weight: bold;
   text-decoration: none;
-	border: 1px solid black;
+	border: 2px solid black;
 	outline: none;
+	transition: background 0.25s;
+}
+.btn-navigate:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.btn-navigate.active {
+	background: rgba(0, 0, 0, 1);
+	color: white;
+}
+.aboutContent {
+	display: none;
+	animation: fade 0.5s;
 }
 .divided {
   display: flex;
@@ -32,36 +51,56 @@
 
 .divider {
   flex-grow: 1;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   /*margin: 5px*/
 }
 ul li{
 	padding-bottom: 5px;
 }
-
+#infoContainer {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: white; 
+	max-width: 1320px;
+	margin: 2% auto 4% auto;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+#aboutTitle {
+	margin-bottom: 2%;
+	text-align: center;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	font-weight: bold;
+	font-size: 32px;
+}
+#researchTitle {
+	text-align: center;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif'; 
+	font-weight: bold;
+	font-size: 32px;
+}
 #scrolldown { 
-    height: 40px; 
-    position: fixed; 
-    bottom:3%;
-    width:100%; 
-    background-color: none; 
-    opacity: 1;
+	height: 40px; 
+	position: fixed; 
+	bottom:3%;
+	width:100%; 
+	background-color: none; 
+	opacity: 1;
 	z-index: 1;
 	color: white;
 	font-weight: bold;
 }
 
 </style>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script> 
 		$(function(){
 			$("#header").load("header.html");  
 		});
 		
-		$(document).ready(function() {  
-			$(window).scroll(sticky_nav());
-			sticky_nav(); // Force the first call on refresh 
-		});
+		// $(document).ready(function() {  
+		// 	$(window).scroll(sticky_nav());
+		// 	sticky_nav(); // Force the first call on refresh 
+		// });
 
 		//hide the scroll down arrow after scrolling occurred
 		$(window).bind('scroll', function() {
@@ -94,134 +133,98 @@ ul li{
 		
 		<span class="top"><div id="header" style="text-align: center"></div></span>
 		<span class="center-lower">
+			<div style="color: white; font-size: 32px;">Hi, I'm</div>
+			<div style="color: white; font-size: 72px;animation: fade 1s;">Jack Hester</div>
 			<div class="nav-lower">
-				<a href="https://jackhester.com/documents/hester_resume.pdf"><div class="rounded-oval">&nbsp;Resume&nbsp;</div></a>
+				<a href="/documents/hester_resume.pdf"><div class="rounded-oval">&nbsp;Resume&nbsp;</div></a>
 				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-				<a href="https://jackhester.com/#research"><div class="rounded-oval">&nbsp;Research&nbsp;Interests&nbsp;</div></a>
+				<a href="#research"><div class="rounded-oval">&nbsp;Research&nbsp;Interests&nbsp;</div></a>
 				<!--<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 				<a href="https://jackhester.com/portfolio.html"><div class="rounded-oval">&nbsp;Portfolio&nbsp;</div></a>-->
 
 			</div>
 		
 		</span>
-		<div id="scrolldown">╲╱</div>
+		<a href="#about"><div id="scrolldown">╲╱</div></a>
 		<img src="images/pvd_fullwidth-1.jpeg" class="fullwidth-background-img">
 	</div> <!--end container with main image, header, circular buttons-->
 	
 	<!--<div class="row">
 		<img src="images/glacier_fullwidth.jpeg" class="fullwidth-background-img">
 	</div>-->
-	<br>
-	<a id="about"></a>
-	
-	<div class="lucida-bold" style="text-align: center; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif'; font-weight: bold; font-size: 32px;">About Me</div>
-	
-	<div class="divided", style="padding-left: 120px; padding-right: 120px; padding-top: 15px;">
-	<button id="whybutton" class="btn btn-navigate"  onclick="whybtn()">Why?</button><span class="divider"></span>
+	<div id="about"></div>
+	<div id="infoContainer">
+		<!-- <a id="about"></a> -->
+		<div class="lucida-bold" id="aboutTitle">About Me</div>
 		
-	<button id="howbutton" class="btn btn-navigate" onclick="howbtn()">How?</button><span class="divider"></span>
+		<div class="divided", style="padding: 15px 120px 0px 120px;">
+			<button id="whybutton" class="btn btn-navigate aboutTabs active"  onclick="toggleAboutText(event, 'whyContent')">Why?</button>
+			<span class="divider"></span>	
+			<button id="howbutton" class="btn btn-navigate aboutTabs" onclick="toggleAboutText(event, 'howContent')">How?</button>
+			<span class="divider"></span>	
+			<button id="whatbutton" class="btn btn-navigate aboutTabs" onclick="toggleAboutText(event, 'whatContent')">What?</button>
+		</div>
+		<br><br>
+		<div id="whyContent" class="aboutContent styleIndent" style="display: block;">
+			Due to countless surgeries and doctors office visits, I've been personally immersed in the health care system from the day I was born. I would constantly imagine ways that the health care system could be improved, from better equipment to cures for diseases to improved physician-patient interactions. My motivation to improve health care--and more fundamentally improve peoples' quality of life--has been at the core of everything I've done. Eventually, I landed in public health in order to work on this goal.
+		</div>
+		<div id="howContent" class="aboutContent styleIndent">
+			In order to accomplish my goals of improving public health and more generally quality of life, I blend technology with health care. I've worked in several domains including computational and biological modeling, natural language processing, web development, data visualization, designing and implementing public health interventions, and education. I'm also in my second year of an MPH at Brown University. By combining concepts from these and other fields, I work to improve the health care system.
+		</div>
+		<div id="whatContent" class="aboutContent styleIndent">
+			I work on a variety of health care problems, including work on technological and privacy-preserving solutions for COVID-19 as well as local government response to COVID-19, the loneliness epidemic, disease modeling and prediction, and identifying drug side effects using NLP. I also have a passion for educating people at all stages of life, and I've worked on mathematical visualizations and am currently teaching a research course at Brown University.
+		</div>
+		<!-- <div id="dynamic" class="styleIndent">JS failed to load :( Click Each Circle to view information.</div> -->
 		
-	<button id="whatbutton" class="btn btn-navigate" onclick="whatbtn()">What?</button>
-	</div><br><br>
-	
-	<div id="dynamic" class="styleIndent">JS failed to load :( Click Each Circle to view information.</div>
-	
-	<br><br><br><br>
-	
-	<a id="research"></a>
-	<div class="lucida-bold" style="text-align: center; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif'; font-weight: bold; font-size: 32px;">Research Interests</div>
-	<div class="styleIndent">
-	
-		As you probably guesed if you looked at my "About" section or network graph above, I have many research interests and ongoing projects. These are some of the topics and questions I'm currently working on.
-		<div class="row">
-		<div class="column">
-			<ul style="list-style-type: none;">
-				<li>What design choices facilitate healthy behaviors?</li>
-				<li>How can health care delivery be redesigned to improve health outcomes?</li>
-				<li>How can we understand and model peer effects realting to health outcomes?</li>
-				<li>How can hospital/patient data be visualized to make it easier to understand for both patients and doctors?</li>
-				<li>How can health care record entry be simplified and/or sped up? How can it be automatically stored and processed to display insights about treatments over time?</li>
-				<li>How much access to health care records should patients have? How do we keep them secure and disperse them (using EmTech i.e. blockchain)?</li>
-				<li>How is the health care system being decentralized away from the current hospital-centric model? What impact does this have on health care accessibility and cost?</li>
-				
-				
-			</ul>
+		<br><br><hr style="width:67%;"/><br><br>
+		
+		<a id="research"></a>
+		<div id="researchTitle" class="lucida-bold">Research Interests</div>
+		<div class="styleIndent">
+		
+			As you probably guessed if you looked at my "About" section or network graph above, I have many research interests and ongoing projects. These are some of the topics and questions I'm currently working on.
+			<div class="row">
+				<div class="column">
+					<ul style="list-style-type: none;">
+						<li>What design choices facilitate healthy behaviors?</li>
+						<li>How can health care delivery be redesigned to improve health outcomes?</li>
+						<li>How can we understand and model peer effects realting to health outcomes?</li>
+						<li>How can hospital/patient data be visualized to make it easier to understand for both patients and doctors?</li>
+						<li>How can health care record entry be simplified and/or sped up? How can it be automatically stored and processed to display insights about treatments over time?</li>
+						<li>How much access to health care records should patients have? How do we keep them secure and disperse them (using EmTech i.e. blockchain)?</li>
+						<li>How is the health care system being decentralized away from the current hospital-centric model? What impact does this have on health care accessibility and cost?</li>
+					</ul>
+				</div>
+				<div class="column">
+					<ul style="list-style-type: none;">
+						<li>How can space tech, ranging from the obvious (remote sensing data, etc.) to the less obvious be used to improve health, and how can health care developments improve space travel?</li>
+						<li>What can we adapt from space technologies to design efficient, sustainable houses and cities that also mitigate negative effects of climate change on health?</li>
+						<li>What insights can behavioral economics provide to those working in health care? How about models from (unexpected?) fields like physics?</li>
+						<li>Who are the major stakeholders in facilitating changes to the health care system? What are they motivated by? How can data be effectively communicated to them in a persuasive way?</li>
+						<li>Who are the biggest players in health care reform going to be? What is the role of private corporations going to look like?</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="column">
-			<ul style="list-style-type: none;">
-				<li>How can space tech, ranging from the obvious (remote sensing data, etc.) to the less obvious be used to improve health, and how can health care developments improve space travel?</li>
-				<li>What can we adapt from space technologies to design efficient, sustainable houses and cities that also mitigate negative effects of climate change on health?</li>
-				<li>What insights can behavioral economics provide to those working in health care? How about models from (unexpected?) fields like physics?</li>
-				<li>Who are the major stakeholders in facilitating changes to the health care system? What are they motivated by? How can data be effectively communicated to them in a persuasive way?</li>
-				<li>Who are the biggest players in health care reform going to be? What is the role of private corporations going to look like?</li>
-			</ul>
-		</div>
-	</div>
 	</div>
 <div class="footer">
 	<p>coded by Jack Hester, hosted by google and github</p>
 </div>
 </body>	
 <script>
-	function whybtn(){
-		var whyelem = document.getElementById('whybutton');
-		var howelem = document.getElementById('howbutton');
-		var whatelem = document.getElementById('whatbutton');
-		
-		whyelem.style.color = "white";
-		whyelem.style.background = "black";
-		
-		howelem.style.color = "black";
-		howelem.style.background = "white";
-		
-		whatelem.style.color = "black";
-		whatelem.style.background = "white";
-		
-		var myDiv = document.getElementById("dynamic");
-		myDiv.innerHTML = "Due to countless surgeries and doctors office visits, I've been personally immersed in the health care system from the day I was born. I would constantly imagine ways that the health care system could be improved, from better equipment to cures for diseases to improved physician-patient interactions. My motivation to improve health care--and more fundamentally improve peoples' quality of life--has been at the core of everything I've done. Eventually, I landed in public health in order to work on this goal.";
-	}
-	
-	function howbtn(){
-		
-		var whyelem = document.getElementById('whybutton');
-		var howelem = document.getElementById('howbutton');
-		var whatelem = document.getElementById('whatbutton');
-		
-		whyelem.style.color = "black";
-		whyelem.style.background = "white";
-		
-		howelem.style.color = "white";
-		howelem.style.background = "black";
-		
-		whatelem.style.color = "black";
-		whatelem.style.background = "white";
-		
-		var myDiv = document.getElementById("dynamic");
-		myDiv.innerHTML = "In order to accomplish my goals of improving public health and more generally quality of life, I blend technology with health care. I've worked in several domains including computational and biological modeling, natrual language processing, web development, data visualization, designing and implementing public health interventions, and education. I'm also in my second year of an MPH at Brown University. By combining concepts from these and other fields, I work to improve the health care system.";
-	}
-	 
-	function whatbtn(){
-		var whyelem = document.getElementById('whybutton');
-		var howelem = document.getElementById('howbutton');
-		var whatelem = document.getElementById('whatbutton');
-		
-		whyelem.style.color = "black";
-		whyelem.style.background = "white";
-		
-		howelem.style.color = "black";
-		howelem.style.background = "white";
-		
-		whatelem.style.color = "white";
-		whatelem.style.background = "black";
-		
-		var myDiv = document.getElementById("dynamic");
-		myDiv.innerHTML = "I work on a variety of health care problems, including work on technological and privacy-preserving solutions for COVID-19 as well as local government response to COVID-19, the loneliness epidemic, disease modeling and prediction, and identifying drug side effects using NLP. I also have a passion for educating people at all stages of life, and I've worked on mathematical visualizations and am currently teaching a research course at Brown University.";
+	function toggleAboutText (event, tabName) {
+		// Toggles active component in about section. Tweaked from W3schools version.
+		var aboutContent = document.getElementsByClassName('aboutContent');
+		for (var i = 0; i < aboutContent.length; i++) aboutContent[i].style.display = "none";
+		var aboutTabs = document.getElementsByClassName('aboutTabs');
+		for (i = 0; i < aboutTabs.length; i++)  aboutTabs[i].className = aboutTabs[i].className.replace(" active", "");
+		document.getElementById(tabName).style.display = "block";
+		document.getElementById(tabName).style.opacity = 1;
+		event.currentTarget.className += " active";
 	}
 
 	function load_script(){
-		whybtn();
 		checkDevice();
 	}
-
 </script>
 </html>
