@@ -373,6 +373,13 @@ tr{
   transform: translate(-50%, 0%);
 }
 
+.center-lower-mob {
+  position: absolute;
+  bottom: 37%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
 /*Rounded oval shape for button backgrounds*/
 .rounded-oval{
   display: flex;
