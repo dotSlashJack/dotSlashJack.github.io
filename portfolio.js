@@ -56,7 +56,7 @@ function filter_content(selection) {
     //design and data viz
     else if(selectedOption == 6){
         hide_these(["undergrad_thesis"]);
-        show_these(["race_rev","cepc_0911","r4edu","educafe"]);
+        show_these(["race_rev","vote_engage"]);
     }
 
     //current projects
