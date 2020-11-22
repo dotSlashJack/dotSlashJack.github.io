@@ -4,7 +4,7 @@ function close_by_id(id){
 
 function show_by_id(id){
     //TODO: update this list as needed for more portfolio items
-    hide_these(["undergrad_thesis_description","race_rev_description","cepc0911_description","r4edu_description","educafe_description"])
+    hide_these(["undergrad_thesis_description","nlp_suite_description","cepc0911_description","r4edu_description","educafe_description"])
     document.getElementById(id).style.display = 'block';
 }
 
@@ -26,37 +26,37 @@ function filter_content(selection) {
     
     //all
     if(selectedOption == 1){ //All
-        show_these(["undergrad_thesis", "cepc_0911", "race_rev","r4edu","educafe"])
+        show_these(["undergrad_thesis", "cepc_0911", "nlp_suite","r4edu","educafe"])
     }
 
     //teaching
     else if(selectedOption == 2){ //
-        hide_these(["race_rev","undergrad_thesis"]);
+        hide_these(["nlp_suite","undergrad_thesis"]);
         show_these(["cepc_0911","r4edu","educafe"]);   
     }
 
     // Software & Code
     else if(selectedOption == 3){
         hide_these(["cepc_0911"]);
-        show_these(["race_rev","undergrad_thesis","r4edu","educafe"]);
+        show_these(["nlp_suite","undergrad_thesis","r4edu","educafe"]);
     }
     
     // Publications & Papers
     else if(selectedOption == 4){
         hide_these(["cepc_0911","r4edu","educafe"]);
-        show_these(["race_rev","undergrad_thesis"]);
+        show_these(["nlp_suite","undergrad_thesis"]);
     }
 
     //comp ling
     else if(selectedOption == 5){
         hide_these(["cepc_0911","r4edu","educafe"]);
-        show_these(["race_rev","undergrad_thesis"]);
+        show_these(["nlp_suite","undergrad_thesis"]);
     }
 
     //design and data viz
     else if(selectedOption == 6){
         hide_these(["undergrad_thesis"]);
-        show_these(["race_rev","vote_engage"]);
+        show_these(["nlp_suite","vote_engage"]);
     }
 
     //current projects

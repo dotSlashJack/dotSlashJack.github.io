@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-family: 'Montserrat';
     font-size: 48px;
 }
@@ -12,22 +12,9 @@ h1{
 .header {
     text-align: center;
     padding: 20px;
-    font-family: 'Montserrat';/*
-    font-family: "Arial Black", Gadget, sans-serif;*/
+    font-family: 'Montserrat';
 }
 
-/* Create two equal columns that floats next to each other */
-/*.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-
-.column img {
-    margin-top: 12px;
-}*/
-
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -44,16 +31,6 @@ a:visited {
     color: black;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: black;
-}
-
-a:active {
-    text-decoration: underline;
-    color: black;
-}
-
 .footer {
     position: fixed;
     left: 0;
@@ -66,13 +43,11 @@ a:active {
     font-family: 'Montserrat';
 }
 
-
 .container {
     position: relative;
 }
 
 .image {
-    opacity: 1;
     display: block;
     width: 100%;
     height: auto;
@@ -82,7 +57,7 @@ a:active {
 
 .middle {
     transition: .5s ease;
-    opacity: 0;
+    /*opacity: 0;*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,89 +66,96 @@ a:active {
     text-align: center;
 }
 
-.container:hover .image {
-    opacity: 0.1;
-}
-
-.container:hover .middle {
-    opacity: 1;
-}
-
-.text {
-    background-color:black;
-    font-family: 'Lucida Grande';
-    font-style: italic;
-    color: white;
-    font-size: 24px;
-    padding: 16px 32px;
-}
-
-.searchbar{
+.searchbar {
     font-size: 24px;
 }
 
-.custom-select{
+.custom-select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       /* Remove default arrow */
+    appearance: none;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
-    /*background-image: url(...);*/   /* Add custom arrow */
     font-size: 24px;
     font-family: 'Lucida Grande';
     font-style: normal;
     border: none;
-    /*(text-decoration: underline;*/
     background-color: none;
     background: none;
     overflow: visible;
     border-bottom: 2px solid black;
-    /*min-width: 30px;
-    width: min-content;*/
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     padding-top: 5px;
-    /*grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-columns: auto auto;*/
-    /*grid-auto-flow: column;*/
 }
 
-#overlay {
-    position: fixed;
-    display: none;
-    width: 50%;
-    height: 50%;
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    z-index: 2;
-    cursor: pointer;
-    color: white;
-    padding: 20px;
-    font-family: 'Lucida Grande';
-  }
-  
-#overlay-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    font-family: 'Lucida Grande';
-}
-
-.description-area{
+.description-area {
     font-family: 'Lucida Grande';
     padding-left: 50px;
+}
+
+
+/*
+-------------------
+*/
+
+.inner-container {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(8, 44, 226, .5);
+    transition: .5s ease;
+}
+
+.inner-container:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    position: relative;
+    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    top: 25%;
+    left: 5%;
+    text-align: left;
+}
+
+.inner-container:hover .text {
+    top: 7%;
+}
+
+.inner-container .bottomtext {
+    font-weight: normal;
+    /*color: white;*/
+    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    text-align: left;
 }
