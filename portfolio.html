@@ -5,6 +5,7 @@
     <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="internal.css">
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="portfolio.js"></script>
@@ -14,27 +15,26 @@
 
     </style>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <!--script> 
-            $(function(){
-                $("#header").load("header.html");  
-            });
-        </script>
-        <div id="header"></div>-->
+    <script>
+        $(function() {
+            $("#header").load("header-black.html");
+        });
+    </script>
+
 </head>
 
 <body onload="onLoad_commands()">
     <!-- Header -->
+    <div id="header"></div>
     <div class="header">
-        <!--<link rel="stylesheet" type="text/css" href="main.css">-->
-        <a id="top"></a>
-        <a href="https://jackhester.com">
+        <!--<a id="top"></a>-->
+        <a href="https://jackhester.com" class="link">
             <h1>Jack Hester</h1>
         </a>
-        <p style="font-size: 24px;"><em>Please note: this page is still being built</em></p>
         <p>
             <div id="typewrite" style="font-size: 24px;"></div>
         </p>
-        <div class="searchbar">
+        <!--<div class="searchbar">
             <form>
                 <label>I'd like to see:&nbsp;</label>
                 <select id="main_select" class="custom-select" onchange="filter_content(this)">
@@ -48,22 +48,20 @@
             <option value = "8">Past Projects (TBA)</option>
           </select>
             </form>
-        </div>
-        <br><br>
-        <div style="padding-bottom: 50px;"><a href="https://jackhester.com">[Main Site]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://jackhester.com/documents/hester_resume.pdf">[View My CV]</a>
-            <br><br>
-        </div>
+        </div>-->
+        <br>
     </div>
     <!-- Photo Grid -->
     <div class="grid-container" style="font-family: Lucida Grande;">
 
-        <!--nyer and times race-->
-        <div id="nlp_suite">
+        <!--summer@brown-->
+        <div id="summer_at_brown">
             <div class="container">
                 <div class="inner-container">
-                    <img src="tiles/ade-thesis.png" alt="Avatar" class="image" />
+                    <img src="tiles/summer_at_brown.png" alt="Avatar" class="image" />
                     <div class="overlay">
-                        <div class="text"><span style="font-weight: bold;">Hello World</span> <br /><br /><br /> More text
+                        <div class="text"><span style="font-weight: bold;">Teaching: Research Methods</span>
+                            <div class="text-hidden"><br /><br />I designed and taught a new course on research methods, for the Brown University Summer@Brown program</div>
                         </div>
                     </div>
                     <div class="inner-container bottomtext">
@@ -72,18 +70,17 @@
                 </div>
                 <!--<p style="text-align: center;">Race Differences (TBA)</p>-->
                 </a>
-                <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data visualization, code, paper, linguistics, publication, current</p>
             </div>
         </div>
 
         <!--Lyme disease-->
-        <div id="lyme_predict">
+        <div id="covid_meter">
             <div class="container">
                 <div class="inner-container">
-                    <img src="tiles/ade-thesis.png" alt="Avatar" class="image" />
+                    <img src="tiles/covid_meter.png" alt="Avatar" class="image" />
                     <div class="overlay">
-                        <div class="text"><span style="font-weight: bold;">Lyme Disease Prediction</span>
-                            <div class="text-hidden"><br />some text here</div>
+                        <div class="text"><span style="font-weight: bold;">COVID-19 Risk Meter</span>
+                            <div class="text-hidden"><br /><br />The Truckee Meadows COVID Risk Meter uses data trends to estimate the current threat posed by COVID in the region on a daily basis</div>
                             <!--<div class="text lower">
               <a href="#">Read More</a></div>
           </div>-->
@@ -95,61 +92,67 @@
                     </div>
                 </div>
                 </a>
-                <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data visualization, code, paper, linguistics, publication, current</p>
             </div>
         </div>
 
-        <!--DFA voter engagement-->
-        <div id="lyme_predict">
+        <!--Lyme disease-->
+        <div id="nlp_suite">
             <div class="container">
                 <div class="inner-container">
-                    <img src="tiles/ade-thesis.png" alt="Avatar" class="image" />
+                    <img src="tiles/nlp_suite.png" alt="Avatar" class="image" />
                     <div class="overlay">
-                        <div class="text"><span style="font-weight: bold;">Hello World</span> <br /><br /><br /> More text
+                        <div class="text"><span style="font-weight: bold;">NLP Toolbox</span>
+                            <div class="text-hidden"><br /><br />Helped develop a suite of over 150 natural language processing tools</div>
                         </div>
                     </div>
                     <div class="inner-container bottomtext">
                         <span style=" text-decoration: underline; text-align: left;"><a href="#" style="color: white;">read more</a></span>&#9656;<br /><br />
                     </div>
                 </div>
-                <!--<p style="text-align: center;">DFA</p>-->
                 </a>
-                <p style="color: rgb(161, 160, 160); font-size: 12px; text-align: center;">data visualization, code, paper, linguistics, publication, current</p>
-            </div>
-            </d iv>
-
-            <!--Undergrad Thesis-->
-            <div id="undergrad_thesis_description" style="display: none;">
-                <hr>
-                <div class="description-area">
-                    <p><strong>Undergraduate Thesis: "A Verb-Based Approach to Mining Adverse Drug Side-Effects from Online Health Care Forums"</strong></p>
-                    <p>My undergraduate thesis used methods from computational linguistics to parse health care forums and automatically extract mentions of adverse drug side-effects. The software pipline I created used Stanford CoreNLP, a custom support
-                        vector machine (SVM), a custom data parser, and other tools written in python and R. I was able to identify several side-effects that were mentioned on the drug insert, in the FDA FEARS database, and a couple of previously unidentified
-                        side-effects.
-                        <br></p>
-                    <p><a href="https://issuu.com/jackhester/docs/hester_thesis">Click here to view the entire thesis.</a></p>
-                    <br>
-                    <a href="#top" onclick="close_by_id('undergrad_thesis_description')" style='font-size: small;'>[Back to the top]</a>
-                </div>
-                <br><br><br>
-            </div>
-
-            <!--Lyme diease prediction-->
-            <div id="lyme" style="display: none;">
-                <hr>
-                <div class="description-area">
-                    <p><strong>Undergraduate Thesis: "A Verb-Based Approach to Mining Adverse Drug Side-Effects from Online Health Care Forums"</strong></p>
-                    <p>My undergraduate thesis used methods from computational linguistics to parse health care forums and automatically extract mentions of adverse drug side-effects. The software pipline I created used Stanford CoreNLP, a custom support
-                        vector machine (SVM), a custom data parser, and other tools written in python and R. I was able to identify several side-effects that were mentioned on the drug insert, in the FDA FEARS database, and a couple of previously unidentified
-                        side-effects.
-                        <br></p>
-                    <p><a href="https://issuu.com/jackhester/docs/hester_thesis">Click here to view the entire thesis.</a></p>
-                    <br>
-                    <a href="#top" onclick="close_by_id('lyme_description')" style='font-size: small;'>[Back to the top]</a>
-                </div>
-                <br><br><br>
             </div>
         </div>
+
+        <div id="thesis">
+            <div class="container">
+                <div class="inner-container">
+                    <img src="tiles/nlp_thesis.png" alt="Avatar" class="image" />
+                    <div class="overlay">
+                        <div class="text"><span style="font-weight: bold;">Thesis: Mining Drug Side Effects</span>
+                            <div class="text-hidden"><br /><br />Using computational linguistics, bioinformatics, and machine learning methods to discover and report dangerous prescription drug side effects</div>
+                        </div>
+                    </div>
+                    <div class="inner-container bottomtext">
+                        <span style=" text-decoration: underline; text-align: left;"><a href="#" style="color: white;">read more</a></span>&#9656;<br /><br />
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="thesis">
+            <div class="container">
+                <div class="inner-container">
+                    <img src="tiles/nlp_thesis.png" alt="Avatar" class="image" />
+                    <div class="overlay">
+                        <div class="text"><span style="font-weight: bold;">Thesis: Mining Drug Side Effects</span>
+                            <div class="text-hidden"><br /><br />Using computational linguistics, bioinformatics, and machine learning methods to discover and report dangerous prescription drug side effects</div>
+                        </div>
+                    </div>
+                    <div class="inner-container bottomtext">
+                        <span style=" text-decoration: underline; text-align: left;"><a href="#" style="color: white;">read more</a></span>&#9656;<br /><br />
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </div>
     <br />
 
