@@ -1,0 +1,47 @@
+.box {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 65% 31%;
+    grid-gap: 3%;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 8px;
+    padding-top: 20px;
+}
+
+.box>div {
+    background-color: rgba(255, 255, 255);
+    text-align: left;
+}
+
+.box #item1 {
+    background-color: rgba(43, 87, 219, .77);
+    text-align: left;
+    color: white;
+    outline: 2px solid rgba(43, 87, 219, .77);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+.box #item2 {
+    background-color: white;
+    text-align: left;
+    outline: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: "Avenir Next Ultra Light" !important;
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+p {
+    font-size: 24px;
+    font-family: "Avenir Next Ultra Light" !important;
+    font-weight: bold;
+}
