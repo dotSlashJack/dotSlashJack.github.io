@@ -9,6 +9,14 @@
     font-family: 'Avenir Medium';
     src: url(fonts/Avenir-Medium.woff);
 }
+@font-face {
+    font-family: 'Avenir Next Regular';
+    src: url(fonts/AvenirNextCyr-Regular.woff);
+}
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(fonts/Avenir-Book.woff);
+}
 
 * {
     box-sizing: border-box;
@@ -16,7 +24,7 @@
 
 h1 {
     /*font-family: 'Montserrat';*/
-    font-family: "Avenir Next Ultra Light" !important;
+    font-family: "Avenir Next Regular" !important;
     font-size: 48px;
 }
 
@@ -24,7 +32,7 @@ h1 {
     text-align: center;
     padding: 10px;
     /*font-family: 'Montserrat';*/
-    font-family: "Avenir Next Ultra Light" !important;
+    font-family: "Avenir Next Regular" !important;
 }
 
 .row:after {
@@ -124,7 +132,7 @@ h1 {
 */
 
 .inner-container {
-    font-family: "Avenir Medium" !important;
+    font-family: "Avenir Book" !important;
     position: relative;
     width: 90%;
     margin-left: auto;
