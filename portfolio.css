@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Asap');
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+    font-family: 'Avenir Next Ultra Light';
+    src: url(fonts/AvenirNextCyr-UltraLight.woff);
+}
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url(fonts/Avenir-Medium.woff);
+}
+
 * {
     box-sizing: border-box;
 }
