@@ -30,8 +30,8 @@ h1 {
 
 .header {
     text-align: center;
-    padding: 10px;
-    /*font-family: 'Montserrat';*/
+    padding-bottom: 0;
+    font-family: 'Montserrat';
     font-family: "Avenir Next Regular" !important;
 }
 
@@ -176,10 +176,12 @@ h1 {
 }
 
 .inner-container:hover .text {
+    font-weight: normal;
     top: 5%;
 }
 
 .text-hidden {
+    font-weight: normal;
     visibility: hidden;
     font-weight: normal;
     color: rgba(255, 255, 255);
