@@ -3,19 +3,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @font-face {
     font-family: 'Avenir Next Ultra Light';
-    src: url(fonts/AvenirNextCyr-UltraLight.woff);
+    src: url(../fonts/AvenirNextCyr-UltraLight.woff);
 }
 @font-face {
     font-family: 'Avenir Medium';
-    src: url(fonts/Avenir-Medium.woff);
+    src: url(../fonts/Avenir-Medium.woff);
 }
 @font-face {
     font-family: 'Avenir Next Regular';
-    src: url(fonts/AvenirNextCyr-Regular.woff);
+    src: url(../fonts/AvenirNextCyr-Regular.woff);
 }
 @font-face {
     font-family: 'Avenir Book';
-    src: url(fonts/Avenir-Book.woff);
+    src: url(../fonts/Avenir-Book.woff);
 }
 
 .box {
