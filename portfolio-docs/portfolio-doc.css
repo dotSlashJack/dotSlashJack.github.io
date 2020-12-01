@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+    font-family: 'Avenir Next Ultra Light';
+    src: url(fonts/AvenirNextCyr-UltraLight.woff);
+}
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url(fonts/Avenir-Medium.woff);
+}
+@font-face {
+    font-family: 'Avenir Next Regular';
+    src: url(fonts/AvenirNextCyr-Regular.woff);
+}
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(fonts/Avenir-Book.woff);
+}
+
 .box {
     display: grid;
     width: 100%;
@@ -44,4 +64,14 @@ p {
     font-size: 24px;
     font-family: "Avenir Next Ultra Light" !important;
     font-weight: bold;
+}
+
+.more a{
+    color: black;
+    font-size: 24px;
+}
+
+.more a:visited{
+    color: black;
+    font-size: 24px;
 }

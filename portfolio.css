@@ -211,3 +211,12 @@ h1 {
     padding-top: 15%;
     padding-bottom: 0;
 }
+
+.center-smaller{
+    font-family: 'Avenir Next Ultra Light';
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    font-size: 18px;
+}

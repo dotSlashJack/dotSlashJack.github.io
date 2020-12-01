@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="internal.css">
+
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" type="text/css" href="../internal.css">
+    <link rel="stylesheet" type="text/css" href="portfolio-doc.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("../header-black.html");
+        });
+    </script>
+    <title>Mining Drug Side Effects | Jack Hester</title>
+</head>
+
+
+<body>
+    <div id="header"></div>
+    <div class="box">
+        <div id="item1">
+            <h2>Mining Drug Side Effects</h2>
+            <p>
+                For my senior thesis at Emory University I used a combination of computational linguistics, bioinformatics, and machine learning methods to discover and report dangerous prescription drug side effects from online health care forums.
+            </p>
+            <p>
+                Adverse drug side-effects (ADEs) cause countless deaths and injuries each year, and they are a large contributor to ineffective and wasteful spending. These harms can be reduced by pharmacovigilance, but the FDA's (Food and Drug Administration's) current post-clinical trial monitoring methods are somewhat lacking. Continuous analysis of online health care forums, among other text sources, can aid in the monitoring process. Previous work has demonstrated the potential for successful extraction of ADEs from online sources, but the methods have relied on large dictionaries. My thesis proposes opportunities for moving away from those dictionary-reliant methods. The proposed approaches are evaluated by comparison of extracted ADEs to drug inserts, the original forum posts, and the FEARS (FDA Adverse Event Reporting System) database. Extraction that relies on a verbs-first approach without the necessity for a side-effect dictionary is shown to be effective. The methods provided are promising and, with future _ne-tuning, may well be able to outperform the current dictionary-reliant ADE extraction routines.
+            </p>
+        </div>
+        <div id="item2">
+            <h2>More</h2>
+            <p class="more">
+                <a href="https://www.jackhester.com/documents/emory-thesis.pdf">Read My Thesis</a>
+            </p>
+            <p class="more">
+                <a href="https://github.com/dotSlashJack/thesis-code">View Thesis Code</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
