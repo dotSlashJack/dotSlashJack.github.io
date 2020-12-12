@@ -121,16 +121,6 @@ h1 {
     padding-top: 5px;
 }
 
-@media (max-width : 320px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 20px;
-        grid-column-gap: 10px;
-        padding-top: 5px;
-    }
-}
-
 .description-area {
     font-family: 'Lucida Grande';
     padding-left: 50px;
@@ -229,4 +219,23 @@ h1 {
     padding-bottom: 100px;
     padding-top: 50px;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 1320px) {
+    /* For mobile phones: */
+    [class*="grid-container"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    [class*="grid-container"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    [class*="grid-container"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
