@@ -228,19 +228,19 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 875px) {
-    [class*="grid-container"] {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 1130px) {
     [class*="grid-container"] {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-/*@media only screen and (max-width: 675px) {
+/*@media only screen and (max-width: 775px) {
+    [class*="grid-container"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 675px) {
     [class*="grid-container"] {
         grid-template-columns: repeat(1, 1fr);
     }
