@@ -234,8 +234,14 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 775px) {
     [class*="grid-container"] {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/*@media only screen and (max-width: 675px) {
+    [class*="grid-container"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}*/
