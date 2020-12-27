@@ -118,7 +118,10 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 20px;
     grid-column-gap: 10px;
-    padding-top: 5px;
+    padding: 5px 35px 0 30px;
+    /*(padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;*/
 }
 
 .description-area {
@@ -232,6 +235,7 @@ h1 {
     [class*="grid-container"] {
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 40px;
+        padding: 5px 5px 0 5px;
     }
     h1 {
         font-size: 72px;
