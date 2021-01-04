@@ -24,8 +24,8 @@
     grid-template-columns: 65% 31%;
     grid-gap: 3%;
     background-color: white;
-    padding-left: 16px;
-    padding-right: 8px;
+    padding-left: 48px;
+    padding-right: 40px;
     padding-top: 20px;
 }
 
@@ -74,4 +74,26 @@ p {
 .more a:visited{
     color: black;
     font-size: 24px;
+}
+
+.bw-btn {
+    border: 1px outset black;
+    font-family: "Avenir Next Ultra Light" !important;
+    font-weight: bold;
+    font-size: 18px;
+    display:flexbox;
+    max-width: 100%;
+    text-align: left;
+    /*height:50px;
+    width:50px;*/
+    cursor:pointer;
+    color: black;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+}
+
+.bw-btn:hover {
+    font-size: 18px;
+    background-color: black;
+    color:white;
 }
