@@ -77,8 +77,8 @@ p {
 }
 
 .bw-btn {
-    border: 1px solid black;
-    font-family: "Avenir Next Ultra Light" !important;
+    border: 2px solid black;
+    font-family: "Avenir Next Regular" !important;
     font-weight: bold;
     font-size: 18px;
     display:flexbox;
