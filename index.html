@@ -15,7 +15,7 @@
         }
         
         body {
-            background-color: rgba(0, 0, 0, .8);
+            background-color: white;
         }
         
         .btn-navigate {
@@ -120,6 +120,35 @@
                 padding-bottom: 50px;
             }
         }*/
+        #mobile{
+            display: none;
+            text-align: center;
+            padding-top: 25%;
+        }
+        #desktopButton{
+            display: none;
+        }
+        @media (pointer:none), (pointer:coarse) {
+            body{
+                background-color: rgba(43, 87, 219, .77);
+            }
+            #mobile{
+                display: block;
+            }
+            #desktopButton{
+                display: block;
+            }
+            #desktop{
+                display: none;
+            }
+            #header{
+                display: none;
+            }
+        }
+        .mob-menu{
+            font-size: 36px;
+            color: white;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script> 
@@ -127,11 +156,24 @@
             $("#header").load("header-black.html");  
         });
     </script>
+    <script>
+        function showDesktop(){
+            d = document.getElementById("desktop");
+            d.style.display = "block";
+            m = document.getElementById("mobile");
+            m.style.display = "none";
+            b = document.getElementById("desktopButton");
+            b.style.display = "none";
+            h = document.getElementById("header");
+            h.style.display = "block";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
 </head>
 
-<body onload="load_script();">
+<body >
     <div id="header" style="padding: 0;"></div>
-    <div class="container">
+    <div class="container" id="desktop">
 
         
         
@@ -149,6 +191,23 @@
 		</span>
         
         <img src="images/pvd_fullwidth-1.jpeg" class="fullwidth-background-img">
+    </div>
+    <div id="mobile" >
+            <br />
+            <hr style="width:55%; border: 1px solid white;" /><br /> <br />        
+            <img src="images/mob-logo.png" style="width: 45%;"/>
+            <br /><br /><br />
+            <a class="mob-menu" href="about.html">About</a><br /><br />
+            <a class="mob-menu" href="portfolio.html">Portfolio</a><br /><br />
+            <a class="mob-menu" href="documents/hester_cv.pdf">CV</a><br /><br />
+            <a class="mob-menu" href="https://github.com/dotSlashJack/">Github</a><br /><br />
+            <a class="mob-menu" href="contact.html">Contact</a><br /><br /><br /> 
+            <hr style="width:55%; border: 1px solid white;" /><br /> 
+    </div>
+    <div style="bottom: 55px; position: fixed; width: 75%; left: 50%; margin-left: -37.5%; font-size: 28px;">
+        <div id="desktopButton" style="text-align: center;">
+            <a href="javascript:showDesktop();" style="color: white;">Show Desktop Version</a>
+        </div>
     </div>
     <div class="footer">
         <p>coded by Jack Hester, hosted by google and github</p>
