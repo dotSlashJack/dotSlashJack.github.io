@@ -66,6 +66,10 @@
         ul li {
             padding-bottom: 5px;
         }
+
+        #mob-footer{
+            display: none;
+        }
         
         #infoContainer {
             padding-top: 2%;
@@ -139,6 +143,13 @@
             #desktopButton{
                 display: block;
             }
+            
+            #desktop-footer{
+                display: none;
+            }
+            #mob-footer{
+                display: block;
+            }
             #desktop{
                 display: none;
             }
@@ -210,9 +221,15 @@
             <a href="javascript:showDesktop();" style="color: white;">Show Desktop Version</a>
         </div>
     </div>-->
-    
-    <div class="footer" style="background-color: inherit; font-size: 28px;">
-        <p>coded by Jack Hester, hosted by google and github</p>
+    <div id="mob-footer">
+        <div class="footer" style="background-color: inherit; font-size: 28px;">
+            <p>coded by Jack Hester, hosted by google and github</p>
+        </div>
+    </div>
+    <div id="desktop-footer">
+        <div class="footer">
+            <p>coded by Jack Hester, hosted by google and github</p>
+        </div>
     </div>
 </body>
 
