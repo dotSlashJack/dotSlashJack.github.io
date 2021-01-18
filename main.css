@@ -368,15 +368,15 @@ tr{
 }
 .center-lower {
   position: absolute;
-  bottom: 35%;
+  bottom: 36%;
   left: 50%;
   transform: translate(-50%, 0%);
 }
 
 .center-lower-mob {
   position: absolute;
-  bottom: 37%;
-  left: 50%;
+  /*bottom: 37%;
+  left: 50%;*/
   transform: translate(-50%, 0%);
 }
 
