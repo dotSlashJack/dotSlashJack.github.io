@@ -131,6 +131,7 @@
         @media (pointer:none), (pointer:coarse) {
             body{
                 background-color: rgba(43, 87, 219, .77);
+                overflow: scroll;
             }
             #mobile{
                 display: block;
@@ -157,7 +158,7 @@
         });
     </script>
     <script>
-        function showDesktop(){
+        /*function showDesktop(){
             d = document.getElementById("desktop");
             d.style.display = "block";
             m = document.getElementById("mobile");
@@ -167,7 +168,7 @@
             h = document.getElementById("header");
             h.style.display = "block";
             document.body.style.backgroundColor = "white";
-        }
+        }*/
     </script>
 </head>
 
@@ -197,19 +198,20 @@
             <hr style="width:55%; border: 1px solid white;" /><br /> <br />        
             <img src="images/mob-logo.png" style="width: 45%;"/>
             <br /><br /><br />
-            <a class="mob-menu" href="about.html">About</a><br /><br />
             <a class="mob-menu" href="portfolio.html">Portfolio</a><br /><br />
             <a class="mob-menu" href="documents/hester_cv.pdf">CV</a><br /><br />
             <a class="mob-menu" href="https://github.com/dotSlashJack/">Github</a><br /><br />
+            <a class="mob-menu" href="about.html">About JH</a><br /><br />
             <a class="mob-menu" href="contact.html">Contact</a><br /><br /><br /> 
             <hr style="width:55%; border: 1px solid white;" /><br /> 
     </div>
-    <div style="bottom: 55px; position: fixed; width: 75%; left: 50%; margin-left: -37.5%; font-size: 28px;">
+    <!--<div style="bottom: 55px; position: fixed; width: 75%; left: 50%; margin-left: -37.5%; font-size: 28px;">
         <div id="desktopButton" style="text-align: center;">
             <a href="javascript:showDesktop();" style="color: white;">Show Desktop Version</a>
         </div>
-    </div>
-    <div class="footer">
+    </div>-->
+    
+    <div class="footer" style="background-color: inherit; font-size: 28px;">
         <p>coded by Jack Hester, hosted by google and github</p>
     </div>
 </body>

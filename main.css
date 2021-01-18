@@ -2,9 +2,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .fullwidth-background-img{
+  
   /*max-width: 100%;*/
-  width: 100%;
-  max-height: 100vh;
+  /*height: 100%;*/
+  /*width: auto;*/
+  height: 100vh;
+  width: auto;
+  display: flex;
+  overflow: hidden;
+  /*background-size: cover;*/
+  justify-content: center;
+  /*object-fit: contain;*/
+}
+
+@media only screen and (max-width: 3855px) {
+
 }
 
 head{
@@ -20,6 +32,7 @@ body{
   margin-left: 0px;
   margin-top: 0px;
   margin-right: 0px;
+  overflow: hidden;
 }
 
 p{
