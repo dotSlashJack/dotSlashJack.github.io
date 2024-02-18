@@ -14,3 +14,11 @@ p {
 img {
     width: 50%;
 }
+
+.italic-footer{
+    font-style: italic;
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
