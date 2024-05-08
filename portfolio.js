@@ -23,7 +23,7 @@ const projects = [
         imgSrc: 'tiles/summer_at_brown.png',
         title: 'Teaching: Research Methods',
         description: 'Designed and taught a new research methods course for the Brown University Summer@Brown program',
-        link: 'portfolio-docs/summer_at_brown.html'
+        link: 'portfolio-docs/summer-at-brown.html'
     },
     {
         id: 'horizon_sat',
@@ -44,14 +44,14 @@ const projects = [
         imgSrc: 'tiles/nlp_thesis.png',
         title: 'Mining Drug Side-Effects from Online Forums',
         description: 'Developed a new method for analyzing the structure of complex networks',
-        link: 'portfolio-docs/undergrad-thesis.html'
+        link: 'portfolio-docs/adv-drug-mine.html'
     },
     {
         id: 'propulsion',
         imgSrc: 'tiles/prop.png',
         title: 'Propulsion Software and Test Stand',
         description: 'Developement of software, electronics, and control systems for a hybrid rocket engine',
-        link: 'portfolio-docs/propulsion_stand.html'
+        link: 'portfolio-docs/propulsion-stand.html'
     },
     {
         id: 'eo_dash',
@@ -79,7 +79,7 @@ const projects = [
         imgSrc: 'tiles/hello.png',
         title: 'The HELLO Project',
         description: 'Addressing the region\'s senior citizen loneliness epidemic and higher-than-average suicide rate',
-        link: 'portfolioi-docs/hello.html'
+        link: 'portfolio-docs/hello.html'
     },
     {
         id: 'marketing_evolution',
