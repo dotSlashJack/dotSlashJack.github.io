@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO | JACK HESTER</title>
     <link rel="icon" href="https://jackhester.com/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" type="text/css" href="/internal.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("/header-black.html");
+        });
+    </script>
+    <link rel="stylesheet" href="/portfolio.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head>
 <body onload="onLoad_commands()">
     <!-- Header -->
-    <header id="header"></header>
+    <div id="header"></div>
     <section class="header">
         <h1>Jack Hester</h1>
         <p id="typewrite" class="typewrite"></p>

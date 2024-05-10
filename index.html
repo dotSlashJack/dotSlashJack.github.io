@@ -1,238 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
+    <title>Jack Hester</title>
     <link rel='shortcut icon' type='image/x-icon' href='https://jackhester.com/favicon.ico' />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <title>Home | Jack Hester</title>
     <link rel="stylesheet" type="text/css" href="internal.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <!--  -->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
+        .centered-column {
+          width: 80%;
+          margin: 0 auto;
+          /*padding: 1%;
+          min-height: 100vh; */
         }
         
-        body {
-            background-color: white;
-            overflow: hidden;
-        }
-        
-        .btn-navigate {
-            cursor: pointer;
-            background: white;
+        .centered-text {
             text-align: center;
-            width: 149px;
-            height: 149px;
-            border-radius: 100%;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-            border: 2px solid black;
-            outline: none;
-            transition: background 0.25s;
         }
-        
-        .btn-navigate:hover {
-            background: rgba(0, 0, 0, 0.1);
+        .italic {
+            font-style: italic;
         }
-        
-        .btn-navigate.active {
-            background: rgba(0, 0, 0, 1);
-            color: white;
-        }
-        
-        .aboutContent {
-            display: none;
-            animation: fade 0.5s;
-        }
-        
-        .divided {
-            display: flex;
-            align-items: center;
-        }
-        
-        .divider {
-            flex-grow: 1;
-            border-bottom: 2px solid black;
-            /*margin: 5px*/
-        }
-        
-        ul li {
+        .bottom-border-div {
             padding-bottom: 5px;
         }
-
-        #mob-footer{
-            display: none;
-        }
-        
-        #infoContainer {
-            padding-top: 2%;
-            padding-bottom: 2%;
-            background-color: white;
-            max-width: 1320px;
-            margin: 2% auto 4% auto;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        #aboutTitle {
-            margin-bottom: 2%;
-            text-align: center;
-            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
-            font-weight: bold;
-            font-size: 32px;
-        }
-        
-        #researchTitle {
-            text-align: center;
-            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
-            font-weight: bold;
-            font-size: 32px;
-        }
-        
-        #scrolldown {
-            height: 40px;
-            position: fixed;
-            bottom: 3%;
-            width: 100%;
-            background-color: none;
-            opacity: 1;
-            z-index: 1;
-            color: white;
-            font-weight: bold;
-        }
-        /*#nameTitle{
-            padding-bottom: 50%;
-        }
-        @media screen and (max-width: 1250px){
-            #nameTitle {
-                padding-bottom: 22vh;
-            }
-        }
-        @media screen and (max-width: 800px){
-            #nameTitle {
-                padding-bottom: 20vh;
-            }
-        }
-        @media screen and (max-width: 450px){
-            #nameTitle {
-                padding-bottom: 50px;
-            }
-        }*/
-        #mobile{
-            display: none;
-            text-align: center;
-            padding-top: 25%;
-        }
-        #desktopButton{
-            display: none;
-        }
-        @media (pointer:none), (pointer:coarse) {
-            body{
-                background-color: rgba(43, 87, 219, .77);
-                overflow: scroll;
-            }
-            #mobile{
-                display: block;
-            }
-            #desktopButton{
-                display: block;
-            }
-            
-            #desktop-footer{
-                display: none;
-            }
-            #mob-footer{
-                display: block;
-            }
-            #desktop{
-                display: none;
-            }
-            #header{
-                display: none;
-            }
-        }
-        .mob-menu{
-            font-size: 36px;
-            color: white;
-        }
     </style>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script> 
         $(function(){
-            $("#header").load("header-black.html");  
+            $("#header").load("/header-black.html");  
         });
     </script>
-    <script>
-        /*function showDesktop(){
-            d = document.getElementById("desktop");
-            d.style.display = "block";
-            m = document.getElementById("mobile");
-            m.style.display = "none";
-            b = document.getElementById("desktopButton");
-            b.style.display = "none";
-            h = document.getElementById("header");
-            h.style.display = "block";
-            document.body.style.backgroundColor = "white";
-        }*/
-    </script>
-</head>
 
-<body >
-    <div id="header" style="padding: 0;"></div>
-    <div class="container" id="desktop">
+</head> 
 
-        
-        
-        <span class="center-lower">
-			<div id="nameTitle" style="color: white; font-size: 72px;animation: fade 3s; ">Jack Hester</div>
-            <div id="nameSubtitle" style="color: white; font-size: 36px;animation: fade 7s; ">Some Computer Literacy</div>
-			
-			<!--<div class="nav-lower">
-				<a href="/documents/hester_cv.pdf"><div class="rounded-oval">CV</div></a>
-				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-				<a href="portfolio.html"><div class="rounded-oval">Portfolio</div></a>
-				<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-				<a href="https://jackhester.com/portfolio.html"><div class="rounded-oval">&nbsp;Portfolio&nbsp;</div></a>
-			</div>-->
-		
-		</span>
-        
-        <img src="images/pvd_fullwidth-1.jpeg" class="fullwidth-background-img">
+<body>
+    <div id="header"></div>
+    <div class="centered-column">
+        <h1>Hello</h1>
+        <p>Congrats on making it to my nice webiste! If you would like me to send you a certificate of visitation to this page you can <a href="./contact.html">email me</a> a picture of yourself holding up today's newspaper and this website open in the background or also just a picture of a pet of yours with the current date and a screenshot of this site and I will send you a certiciate. Now here are some things about me and you can find even more about me on the other pages on this site.</p>
     </div>
-    <div id="mobile" >
-            <br />
-            <hr style="width:55%; border: 1px solid white;" /><br /> <br />        
-            <img src="images/mob-logo.png" style="width: 45%;"/>
-            <br /><br /><br />
-            <a class="mob-menu" href="portfolio.html">Portfolio</a><br /><br />
-            <a class="mob-menu" href="documents/hester_cv.pdf">CV</a><br /><br />
-            <a class="mob-menu" href="https://github.com/dotSlashJack/">Github</a><br /><br />
-            <a class="mob-menu" href="about.html">About JH</a><br /><br />
-            <a class="mob-menu" href="contact.html">Contact</a><br /><br /><br /> 
-            <hr style="width:55%; border: 1px solid white;" /><br /> 
+    <div class="centered-column">
+        <h1>About me</h1>
+        <p>
+            I've been personally immersed in the health care system since the day I was born. I would constantly imagine ways that the health care system could be improved,
+            from better equipment to cures for diseases to improved physician-patient interactions. My motivation to improve health care&mdash;and more fundamentally improve peoples'
+            quality of life&mdash;has been at the core of everything I've done. I chose to pursue health care research, and that decision has led me on an odyssey of sorts.
+        </p>
+        <p class="centered-text">
+            <span class="italic">"He's doing something over there"</span> - dealer's choice of my friends
+        </p>
+        <p>In order to accomplish my goals of improving health and quality of life, I blend computer science and engineering with health care. I've worked in several domains including mobile app design, digital fabrication, computational and biological modeling, natural language processing, web development,
+            data visualization, designing and implementing public health interventions, and education. I'm currently entering my fourth year of my PhD in personal health informatics and Northeastern University, where I am part of the <a href="https://actlab.sites.northeastern.edu/">Accessible and Creative Technologies Lab</a>.
+        </p>
+        <p class="centered-text">
+            <span class="italic">"Somewhat computer literate"</span> - many people
+        </p>
+        <p>
+            I work on a variety of health care and accessibility topics. Some of my more recently completed projects have included the development and evaluation of a smartwatch app for longitudinal analysis of post-stroke word recall, creation of a measure and dashboard related to community-level impact of COVID-19 for a local government, and identifying drug
+            side effects from health care forums using NLP. I also have a passion for educating people at all stages of life, and I've taught adaptive skiing, worked on mathematical visualizations, and taught a research course at Brown University for several years.
+        </p>
+        <p class="centered-text">
+            <span class="italic">"This website could have been a linkedin page"</span> - you, possibly
+        </p>
+        
+        <p>Right now most of my work focuses on digital fabrication, specifically computational machine knitting. This research largely falls into two categories, and is centered around the use of a full-garment, automatic knitting machine that is most commonly used for the manufacturing of knitted clothes such as sweaters or shirts.
+            The first cateogry is the development of software and interfaces for improving the process of going from design and idetion to knitting-machine-usable code to actually "print" the garment. The second category is using these design tools to fabricate knit sensors using special yarns capable of sensing touch, pressure, and changes electrical signals generated by the body;
+            these sensors are intended mostly for physiological sensing and activity recognition. I am also involved in Northeastern's CubeSat (mini satellite) initiative, where I serve as the electrical lead for all three satellites currently under development.</p>
     </div>
-    <!--<div style="bottom: 55px; position: fixed; width: 75%; left: 50%; margin-left: -37.5%; font-size: 28px;">
-        <div id="desktopButton" style="text-align: center;">
-            <a href="javascript:showDesktop();" style="color: white;">Show Desktop Version</a>
+    <div class="centered-column">
+        <h1>Specific interests</h1>
+        <p>
+            As you can imagine, I have many research interests and <a href="./portfolio.html">ongoing projects</a>! Below is a list of questions I am working on or at least hope to work on one day in no particular order:
+        </p>
+        <div class="two-column">
+            <div class="column">
+                <div class="bottom-border-div">How can soft materials be used for improving the fit of orthotic and prosthetic</div>
+                <div class="bottom-border-div">What design choices facilitate healthy behaviors?</div>
+                <div class="bottom-border-div">What are the unique affordances of knit fabrics and structures and how they be applied used to address health and accessibility goals?</div>
+                <div class="bottom-border-div">What are the biggest caps in yarns and other soft materials that would lead to the next big leap in soft textile capabilities?</div>
+                <div class="bottom-border-div">How can health care delivery be redesigned to improve health outcomes?</div>
+                <div class="bottom-border-div">What software and design tools can we create to improve the speed and ease of knit garment protyping and fabrication?</div>
+                <div class="bottom-border-div">What information can we aggregate from wearables to discover and model disease spread?</div>
+                <div class="bottom-border-div">How can hospital/patient data be visualized to make it easier to understand for both patients and doctors?</div>
+                <div class="bottom-border-div">How can health care record entry be simplified and/or sped up? How can it be automatically stored and processed to display insights about treatments over time?</div>
+                <div class="bottom-border-div">How much access to health care records and data should patients have? How do we keep them secure and disperse them (using EmTech i.e. blockchain)?</div>
+            </div>
+            <div class="column">
+                
+                <div class="bottom-border-div">How is the health care system being decentralized away from the current hospital-centric model? What impact does this have on health care accessibility and cost?</div>
+                <div class="bottom-border-div">How do we combine analysis of social media and online interactions with analysis of real-world interactions and movement patterns?</div>
+                <div class="bottom-border-div">How can space tech, ranging from the obvious (remote sensing data, etc.) to the less obvious be used to improve health, and how can health care developments improve space travel?</div>
+                <div class="bottom-border-div">What can we adapt from space technologies to design efficient, sustainable clothing, houses, and cities that also mitigate negative effects of climate change on health?</div>
+                <div class="bottom-border-div">What insights can behavioral economics provide to those working in health care? How about models from (unexpected?) fields like physics?</div>
+                <div class="bottom-border-div">Who are the major stakeholders in facilitating changes to the health care system? What are they motivated by? How can data be effectively communicated to them in a persuasive way?</div>
+                <div class="bottom-border-div">Who are the biggest players in health care reform going to be? What is the role of private corporations going to look like?</div>
+            </div>
         </div>
-    </div>-->
-    <!-- <div id="mob-footer">
-        <div class="footer" style="background-color: rgba(43, 87, 219, .77);; font-size: 28px;">
-            <p>coded by Jack Hester, hosted by google and github</p>
-        </div>
-    </div> -->
-    <!-- <div id="desktop-footer">
-        <div class="footer">
-            <p>coded by Jack Hester, hosted by google and github</p>
-        </div>
-    </div> -->
+    </div>
 </body>
 
 </html>
