@@ -15,21 +15,26 @@
       min-height: 100vh;
       background-color: #000;
       font-family: sans-serif;
+      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     h1 {
       font-size: 5rem;
-      /* Uncomment the next lines to use a gradient:
+      /* Uncomment to use a gradient:
       background: linear-gradient(to top, #8e8f91, white);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;*/
       color: #fff;
       transform: skew(-10deg);
       margin: 0;
+      text-align: center;
     }
 
     nav {
       margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
@@ -37,6 +42,7 @@
       color: #aaa;
       text-decoration: none;
       font-size: 2rem;
+      margin-bottom: 0.5rem; /* Add spacing on wrapped lines */
     }
 
     nav a:hover {
@@ -49,6 +55,22 @@
       margin-top: 1.5rem;
       font-size: 1.5rem;
       color: #aaa;
+      text-align: center;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+        transform: none;
+      }
+      nav a {
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
